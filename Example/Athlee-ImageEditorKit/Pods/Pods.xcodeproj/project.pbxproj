@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0288B602D0F9C8827315134C1D808DB5 /* Pods-Athlee-ImageEditorKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE656B4F5FA00FB06B5F2AB126C9F2 /* Pods-Athlee-ImageEditorKit-dummy.m */; };
+		699F830CCC568F9E5613F384BD17FA40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		BC763968905E1E592B4E68D8FD3E5DD9 /* Pods-Athlee-ImageEditorKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C66E17DE2FF7A9F02F89A3ABD1B6A169 /* Pods-Athlee-ImageEditorKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10DE656B4F5FA00FB06B5F2AB126C9F2 /* Pods-Athlee-ImageEditorKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Athlee-ImageEditorKit-dummy.m"; sourceTree = "<group>"; };
+		320950A60FF8E882E7F69E1422DE30AF /* Pods-Athlee-ImageEditorKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Athlee-ImageEditorKit-resources.sh"; sourceTree = "<group>"; };
+		6A1F20B484E5110DD6D13C46B4160157 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7026F7AA6BEFED10C473777BC0D5490F /* Pods-Athlee-ImageEditorKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Athlee-ImageEditorKit-frameworks.sh"; sourceTree = "<group>"; };
+		762D6D35B8949D220583EE37F9AD126B /* Pods_Athlee_ImageEditorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athlee_ImageEditorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8207B65EF79AB0A0392C0AEBA2192B27 /* Pods-Athlee-ImageEditorKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Athlee-ImageEditorKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5E8D627266ECF76F783C3F9315D2C65 /* Pods-Athlee-ImageEditorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Athlee-ImageEditorKit.release.xcconfig"; sourceTree = "<group>"; };
+		A689FE9874950A8A4A642BC8507257BA /* Pods-Athlee-ImageEditorKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Athlee-ImageEditorKit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB6D4C623FE2CBEF4D44694A3087B350 /* Pods-Athlee-ImageEditorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Athlee-ImageEditorKit.modulemap"; sourceTree = "<group>"; };
+		C66E17DE2FF7A9F02F89A3ABD1B6A169 /* Pods-Athlee-ImageEditorKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Athlee-ImageEditorKit-umbrella.h"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E3CE561E746C6930DA50FF5951C14C8A /* Pods-Athlee-ImageEditorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Athlee-ImageEditorKit.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E84AAC247C2CBCC58C2E237EB334E980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699F830CCC568F9E5613F384BD17FA40 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		280687CE23F3999BB8ADF6A6C3F668AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				762D6D35B8949D220583EE37F9AD126B /* Pods_Athlee_ImageEditorKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7158542C65F4BA9B3A5CE54049656B61 /* Pods-Athlee-ImageEditorKit */ = {
+			isa = PBXGroup;
+			children = (
+				6A1F20B484E5110DD6D13C46B4160157 /* Info.plist */,
+				BB6D4C623FE2CBEF4D44694A3087B350 /* Pods-Athlee-ImageEditorKit.modulemap */,
+				A689FE9874950A8A4A642BC8507257BA /* Pods-Athlee-ImageEditorKit-acknowledgements.markdown */,
+				8207B65EF79AB0A0392C0AEBA2192B27 /* Pods-Athlee-ImageEditorKit-acknowledgements.plist */,
+				10DE656B4F5FA00FB06B5F2AB126C9F2 /* Pods-Athlee-ImageEditorKit-dummy.m */,
+				7026F7AA6BEFED10C473777BC0D5490F /* Pods-Athlee-ImageEditorKit-frameworks.sh */,
+				320950A60FF8E882E7F69E1422DE30AF /* Pods-Athlee-ImageEditorKit-resources.sh */,
+				C66E17DE2FF7A9F02F89A3ABD1B6A169 /* Pods-Athlee-ImageEditorKit-umbrella.h */,
+				E3CE561E746C6930DA50FF5951C14C8A /* Pods-Athlee-ImageEditorKit.debug.xcconfig */,
+				A5E8D627266ECF76F783C3F9315D2C65 /* Pods-Athlee-ImageEditorKit.release.xcconfig */,
+			);
+			name = "Pods-Athlee-ImageEditorKit";
+			path = "Target Support Files/Pods-Athlee-ImageEditorKit";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				280687CE23F3999BB8ADF6A6C3F668AC /* Products */,
+				C4C2D5891A1EB7E99760ADB3261CD341 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4C2D5891A1EB7E99760ADB3261CD341 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7158542C65F4BA9B3A5CE54049656B61 /* Pods-Athlee-ImageEditorKit */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F411C72A4B6A7D028D52884351A825D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC763968905E1E592B4E68D8FD3E5DD9 /* Pods-Athlee-ImageEditorKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B6CF6DD57B98E2F55C72E843E04A6F47 /* Pods-Athlee-ImageEditorKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CBC5CFDA92EFE35B00DD2E401DD518 /* Build configuration list for PBXNativeTarget "Pods-Athlee-ImageEditorKit" */;
+			buildPhases = (
+				DA2831804574651110462BF2ECF5FF97 /* Sources */,
+				E84AAC247C2CBCC58C2E237EB334E980 /* Frameworks */,
+				F411C72A4B6A7D028D52884351A825D9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Athlee-ImageEditorKit";
+			productName = "Pods-Athlee-ImageEditorKit";
+			productReference = 762D6D35B8949D220583EE37F9AD126B /* Pods_Athlee_ImageEditorKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 280687CE23F3999BB8ADF6A6C3F668AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6CF6DD57B98E2F55C72E843E04A6F47 /* Pods-Athlee-ImageEditorKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA2831804574651110462BF2ECF5FF97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0288B602D0F9C8827315134C1D808DB5 /* Pods-Athlee-ImageEditorKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6FB20E5C2C8CFFFAF68EBF51C4FA090E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E8D627266ECF76F783C3F9315D2C65 /* Pods-Athlee-ImageEditorKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Athlee-ImageEditorKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Athlee-ImageEditorKit/Pods-Athlee-ImageEditorKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Athlee_ImageEditorKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B0EA638206C7FE03C3B055B3703F0EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3CE561E746C6930DA50FF5951C14C8A /* Pods-Athlee-ImageEditorKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Athlee-ImageEditorKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Athlee-ImageEditorKit/Pods-Athlee-ImageEditorKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Athlee_ImageEditorKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5CBC5CFDA92EFE35B00DD2E401DD518 /* Build configuration list for PBXNativeTarget "Pods-Athlee-ImageEditorKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0EA638206C7FE03C3B055B3703F0EA6 /* Debug */,
+				6FB20E5C2C8CFFFAF68EBF51C4FA090E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

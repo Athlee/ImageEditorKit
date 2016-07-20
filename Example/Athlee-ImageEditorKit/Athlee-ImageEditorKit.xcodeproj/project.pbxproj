@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		044838E91D3F215100D6017B /* BlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838BE1D3F215100D6017B /* BlurFilter.swift */; };
+		044838EA1D3F215100D6017B /* ColorAdjustmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838BF1D3F215100D6017B /* ColorAdjustmentFilter.swift */; };
+		044838EB1D3F215100D6017B /* ColorEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C01D3F215100D6017B /* ColorEffectFilter.swift */; };
+		044838EC1D3F215100D6017B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C11D3F215100D6017B /* Filter.swift */; };
+		044838ED1D3F215100D6017B /* GeometryAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C21D3F215100D6017B /* GeometryAdjustment.swift */; };
+		044838EE1D3F215100D6017B /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C31D3F215100D6017B /* ImageFilter.swift */; };
+		044838EF1D3F215100D6017B /* TileEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C41D3F215100D6017B /* TileEffect.swift */; };
+		044838F01D3F215100D6017B /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C61D3F215100D6017B /* Any.swift */; };
+		044838F11D3F215100D6017B /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838C71D3F215100D6017B /* UIImage.swift */; };
+		044838F21D3F215100D6017B /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838CA1D3F215100D6017B /* GaussianBlurFilter.swift */; };
+		044838F31D3F215100D6017B /* ColorInvertFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838CD1D3F215100D6017B /* ColorInvertFilter.swift */; };
+		044838F41D3F215100D6017B /* ColorMonochromeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838CE1D3F215100D6017B /* ColorMonochromeFilter.swift */; };
+		044838F51D3F215100D6017B /* ColorPosterizeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838CF1D3F215100D6017B /* ColorPosterizeFilter.swift */; };
+		044838F61D3F215100D6017B /* FalseColorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D01D3F215100D6017B /* FalseColorFilter.swift */; };
+		044838F81D3F215100D6017B /* MaskToAlphaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D21D3F215100D6017B /* MaskToAlphaFilter.swift */; };
+		044838F91D3F215100D6017B /* PhotoEffectChromeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D31D3F215100D6017B /* PhotoEffectChromeFilter.swift */; };
+		044838FA1D3F215100D6017B /* PhotoEffectFadeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D41D3F215100D6017B /* PhotoEffectFadeFilter.swift */; };
+		044838FB1D3F215100D6017B /* PhotoEffectInstantFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D51D3F215100D6017B /* PhotoEffectInstantFilter.swift */; };
+		044838FC1D3F215100D6017B /* PhotoEffectMonoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D61D3F215100D6017B /* PhotoEffectMonoFilter.swift */; };
+		044838FD1D3F215100D6017B /* PhotoEffectNoirFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D71D3F215100D6017B /* PhotoEffectNoirFilter.swift */; };
+		044838FE1D3F215100D6017B /* PhotoEffectProcessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D81D3F215100D6017B /* PhotoEffectProcessFilter.swift */; };
+		044838FF1D3F215100D6017B /* PhotoEffectTonalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838D91D3F215100D6017B /* PhotoEffectTonalFilter.swift */; };
+		044839001D3F215100D6017B /* PhotoEffectTransferFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838DA1D3F215100D6017B /* PhotoEffectTransferFilter.swift */; };
+		044839011D3F215100D6017B /* SepiaToneFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838DB1D3F215100D6017B /* SepiaToneFilter.swift */; };
+		044839021D3F215100D6017B /* VignetteEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838DC1D3F215100D6017B /* VignetteEffectFilter.swift */; };
+		044839031D3F215100D6017B /* VignetteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838DD1D3F215100D6017B /* VignetteFilter.swift */; };
+		044839041D3F215100D6017B /* AffineTransformFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838DF1D3F215100D6017B /* AffineTransformFilter.swift */; };
+		044839051D3F215100D6017B /* AffineClampFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838E11D3F215100D6017B /* AffineClampFilter.swift */; };
+		044839061D3F215100D6017B /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838E41D3F215100D6017B /* ImageProcessor.swift */; };
+		044839071D3F215100D6017B /* ImageProcessorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838E51D3F215100D6017B /* ImageProcessorType.swift */; };
+		044839081D3F215100D6017B /* ScalePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838E71D3F215100D6017B /* ScalePicker.swift */; };
+		044839091D3F215100D6017B /* TwoSideSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044838E81D3F215100D6017B /* TwoSideSlider.swift */; };
+		0448390B1D3F222C00D6017B /* Scanable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448390A1D3F222C00D6017B /* Scanable.swift */; };
+		0448390D1D3F224C00D6017B /* FilterErrorPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448390C1D3F224C00D6017B /* FilterErrorPrinter.swift */; };
+		0448390F1D3F227000D6017B /* ColorControlsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448390E1D3F227000D6017B /* ColorControlsFilter.swift */; };
+		0464178D1D3D50F300C9AE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464178C1D3D50F300C9AE3F /* AppDelegate.swift */; };
+		046417921D3D50F300C9AE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046417901D3D50F300C9AE3F /* Main.storyboard */; };
+		046417941D3D50F300C9AE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046417931D3D50F300C9AE3F /* Assets.xcassets */; };
+		046417971D3D50F300C9AE3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046417951D3D50F300C9AE3F /* LaunchScreen.storyboard */; };
+		046417A21D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417A11D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift */; };
+		046417AF1D3D53D500C9AE3F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417AE1D3D53D500C9AE3F /* ImageViewController.swift */; };
+		046417B11D3D53EB00C9AE3F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417B01D3D53EB00C9AE3F /* ContainerViewController.swift */; };
+		046417B31D3D540200C9AE3F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417B21D3D540200C9AE3F /* FilterViewController.swift */; };
+		046417B51D3D541000C9AE3F /* BrightnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417B41D3D541000C9AE3F /* BrightnessViewController.swift */; };
+		046417B71D3D541500C9AE3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417B61D3D541500C9AE3F /* CropViewController.swift */; };
+		046418051D3DD63E00C9AE3F /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046418041D3DD63E00C9AE3F /* FilterCell.swift */; };
+		046418181D3F081000C9AE3F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046418171D3F081000C9AE3F /* UIColor.swift */; };
+		0464181F1D3F0E0300C9AE3F /* Cropable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464181E1D3F0E0300C9AE3F /* Cropable.swift */; };
+		046418211D3F0E0C00C9AE3F /* CropableScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046418201D3F0E0C00C9AE3F /* CropableScrollViewDelegate.swift */; };
+		046418231D3F0E6C00C9AE3F /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046418221D3F0E6C00C9AE3F /* LinesView.swift */; };
+		A479BB745FA0678EE1E702E3 /* Pods_Athlee_ImageEditorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FEF224D0001790198E0E91 /* Pods_Athlee_ImageEditorKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0464179E1D3D50F400C9AE3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046417811D3D50F300C9AE3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046417881D3D50F300C9AE3F;
+			remoteInfo = "Athlee-ImageEditorKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		044838BE1D3F215100D6017B /* BlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
+		044838BF1D3F215100D6017B /* ColorAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAdjustmentFilter.swift; sourceTree = "<group>"; };
+		044838C01D3F215100D6017B /* ColorEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorEffectFilter.swift; sourceTree = "<group>"; };
+		044838C11D3F215100D6017B /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		044838C21D3F215100D6017B /* GeometryAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryAdjustment.swift; sourceTree = "<group>"; };
+		044838C31D3F215100D6017B /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
+		044838C41D3F215100D6017B /* TileEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffect.swift; sourceTree = "<group>"; };
+		044838C61D3F215100D6017B /* Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
+		044838C71D3F215100D6017B /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		044838CA1D3F215100D6017B /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
+		044838CD1D3F215100D6017B /* ColorInvertFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorInvertFilter.swift; sourceTree = "<group>"; };
+		044838CE1D3F215100D6017B /* ColorMonochromeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMonochromeFilter.swift; sourceTree = "<group>"; };
+		044838CF1D3F215100D6017B /* ColorPosterizeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPosterizeFilter.swift; sourceTree = "<group>"; };
+		044838D01D3F215100D6017B /* FalseColorFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FalseColorFilter.swift; sourceTree = "<group>"; };
+		044838D21D3F215100D6017B /* MaskToAlphaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskToAlphaFilter.swift; sourceTree = "<group>"; };
+		044838D31D3F215100D6017B /* PhotoEffectChromeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectChromeFilter.swift; sourceTree = "<group>"; };
+		044838D41D3F215100D6017B /* PhotoEffectFadeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectFadeFilter.swift; sourceTree = "<group>"; };
+		044838D51D3F215100D6017B /* PhotoEffectInstantFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectInstantFilter.swift; sourceTree = "<group>"; };
+		044838D61D3F215100D6017B /* PhotoEffectMonoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectMonoFilter.swift; sourceTree = "<group>"; };
+		044838D71D3F215100D6017B /* PhotoEffectNoirFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectNoirFilter.swift; sourceTree = "<group>"; };
+		044838D81D3F215100D6017B /* PhotoEffectProcessFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectProcessFilter.swift; sourceTree = "<group>"; };
+		044838D91D3F215100D6017B /* PhotoEffectTonalFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectTonalFilter.swift; sourceTree = "<group>"; };
+		044838DA1D3F215100D6017B /* PhotoEffectTransferFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEffectTransferFilter.swift; sourceTree = "<group>"; };
+		044838DB1D3F215100D6017B /* SepiaToneFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaToneFilter.swift; sourceTree = "<group>"; };
+		044838DC1D3F215100D6017B /* VignetteEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VignetteEffectFilter.swift; sourceTree = "<group>"; };
+		044838DD1D3F215100D6017B /* VignetteFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VignetteFilter.swift; sourceTree = "<group>"; };
+		044838DF1D3F215100D6017B /* AffineTransformFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffineTransformFilter.swift; sourceTree = "<group>"; };
+		044838E11D3F215100D6017B /* AffineClampFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffineClampFilter.swift; sourceTree = "<group>"; };
+		044838E41D3F215100D6017B /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		044838E51D3F215100D6017B /* ImageProcessorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessorType.swift; sourceTree = "<group>"; };
+		044838E71D3F215100D6017B /* ScalePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalePicker.swift; sourceTree = "<group>"; };
+		044838E81D3F215100D6017B /* TwoSideSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSideSlider.swift; sourceTree = "<group>"; };
+		0448390A1D3F222C00D6017B /* Scanable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanable.swift; sourceTree = "<group>"; };
+		0448390C1D3F224C00D6017B /* FilterErrorPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterErrorPrinter.swift; sourceTree = "<group>"; };
+		0448390E1D3F227000D6017B /* ColorControlsFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorControlsFilter.swift; path = ../ColorEffectFilters/ColorControlsFilter.swift; sourceTree = "<group>"; };
+		046417891D3D50F300C9AE3F /* Athlee-ImageEditorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Athlee-ImageEditorKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0464178C1D3D50F300C9AE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		046417911D3D50F300C9AE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046417931D3D50F300C9AE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046417961D3D50F300C9AE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046417981D3D50F300C9AE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0464179D1D3D50F400C9AE3F /* Athlee-ImageEditorKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Athlee-ImageEditorKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046417A11D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlee_ImageEditorKitTests.swift; sourceTree = "<group>"; };
+		046417A31D3D50F400C9AE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046417AE1D3D53D500C9AE3F /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		046417B01D3D53EB00C9AE3F /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		046417B21D3D540200C9AE3F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		046417B41D3D541000C9AE3F /* BrightnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessViewController.swift; sourceTree = "<group>"; };
+		046417B61D3D541500C9AE3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		046418041D3DD63E00C9AE3F /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		046418171D3F081000C9AE3F /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		0464181E1D3F0E0300C9AE3F /* Cropable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cropable.swift; sourceTree = "<group>"; };
+		046418201D3F0E0C00C9AE3F /* CropableScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropableScrollViewDelegate.swift; sourceTree = "<group>"; };
+		046418221D3F0E6C00C9AE3F /* LinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesView.swift; sourceTree = "<group>"; };
+		23388D0110DDFB6BDDAA317F /* Pods-Athlee-ImageEditorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athlee-ImageEditorKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Athlee-ImageEditorKit/Pods-Athlee-ImageEditorKit.release.xcconfig"; sourceTree = "<group>"; };
+		30FEF224D0001790198E0E91 /* Pods_Athlee_ImageEditorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athlee_ImageEditorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D6F5EEAA6737C7520DFF3B /* Pods-Athlee-ImageEditorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athlee-ImageEditorKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Athlee-ImageEditorKit/Pods-Athlee-ImageEditorKit.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046417861D3D50F300C9AE3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A479BB745FA0678EE1E702E3 /* Pods_Athlee_ImageEditorKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0464179A1D3D50F400C9AE3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		044838BB1D3F215100D6017B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				044838BC1D3F215100D6017B /* ImageProcessor */,
+				044838E61D3F215100D6017B /* UI */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		044838BC1D3F215100D6017B /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				044838BD1D3F215100D6017B /* Categories */,
+				044838C51D3F215100D6017B /* Extensions */,
+				044838C81D3F215100D6017B /* Filters */,
+				044838E21D3F215100D6017B /* Helpers */,
+				044838E31D3F215100D6017B /* Processor */,
+			);
+			path = ImageProcessor;
+			sourceTree = "<group>";
+		};
+		044838BD1D3F215100D6017B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				044838BE1D3F215100D6017B /* BlurFilter.swift */,
+				044838BF1D3F215100D6017B /* ColorAdjustmentFilter.swift */,
+				044838C01D3F215100D6017B /* ColorEffectFilter.swift */,
+				044838C11D3F215100D6017B /* Filter.swift */,
+				044838C21D3F215100D6017B /* GeometryAdjustment.swift */,
+				044838C31D3F215100D6017B /* ImageFilter.swift */,
+				044838C41D3F215100D6017B /* TileEffect.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		044838C51D3F215100D6017B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				044838C61D3F215100D6017B /* Any.swift */,
+				044838C71D3F215100D6017B /* UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		044838C81D3F215100D6017B /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				044838C91D3F215100D6017B /* BlurFilters */,
+				044838CB1D3F215100D6017B /* ColorAdjustmentFilters */,
+				044838CC1D3F215100D6017B /* ColorEffectFilters */,
+				044838DE1D3F215100D6017B /* GeometryAdjustmentFilters */,
+				044838E01D3F215100D6017B /* TileEffectFilters */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		044838C91D3F215100D6017B /* BlurFilters */ = {
+			isa = PBXGroup;
+			children = (
+				044838CA1D3F215100D6017B /* GaussianBlurFilter.swift */,
+			);
+			path = BlurFilters;
+			sourceTree = "<group>";
+		};
+		044838CB1D3F215100D6017B /* ColorAdjustmentFilters */ = {
+			isa = PBXGroup;
+			children = (
+				0448390E1D3F227000D6017B /* ColorControlsFilter.swift */,
+			);
+			path = ColorAdjustmentFilters;
+			sourceTree = "<group>";
+		};
+		044838CC1D3F215100D6017B /* ColorEffectFilters */ = {
+			isa = PBXGroup;
+			children = (
+				044838CD1D3F215100D6017B /* ColorInvertFilter.swift */,
+				044838CE1D3F215100D6017B /* ColorMonochromeFilter.swift */,
+				044838CF1D3F215100D6017B /* ColorPosterizeFilter.swift */,
+				044838D01D3F215100D6017B /* FalseColorFilter.swift */,
+				044838D21D3F215100D6017B /* MaskToAlphaFilter.swift */,
+				044838D31D3F215100D6017B /* PhotoEffectChromeFilter.swift */,
+				044838D41D3F215100D6017B /* PhotoEffectFadeFilter.swift */,
+				044838D51D3F215100D6017B /* PhotoEffectInstantFilter.swift */,
+				044838D61D3F215100D6017B /* PhotoEffectMonoFilter.swift */,
+				044838D71D3F215100D6017B /* PhotoEffectNoirFilter.swift */,
+				044838D81D3F215100D6017B /* PhotoEffectProcessFilter.swift */,
+				044838D91D3F215100D6017B /* PhotoEffectTonalFilter.swift */,
+				044838DA1D3F215100D6017B /* PhotoEffectTransferFilter.swift */,
+				044838DB1D3F215100D6017B /* SepiaToneFilter.swift */,
+				044838DC1D3F215100D6017B /* VignetteEffectFilter.swift */,
+				044838DD1D3F215100D6017B /* VignetteFilter.swift */,
+			);
+			path = ColorEffectFilters;
+			sourceTree = "<group>";
+		};
+		044838DE1D3F215100D6017B /* GeometryAdjustmentFilters */ = {
+			isa = PBXGroup;
+			children = (
+				044838DF1D3F215100D6017B /* AffineTransformFilter.swift */,
+			);
+			path = GeometryAdjustmentFilters;
+			sourceTree = "<group>";
+		};
+		044838E01D3F215100D6017B /* TileEffectFilters */ = {
+			isa = PBXGroup;
+			children = (
+				044838E11D3F215100D6017B /* AffineClampFilter.swift */,
+			);
+			path = TileEffectFilters;
+			sourceTree = "<group>";
+		};
+		044838E21D3F215100D6017B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0448390C1D3F224C00D6017B /* FilterErrorPrinter.swift */,
+				0448390A1D3F222C00D6017B /* Scanable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		044838E31D3F215100D6017B /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				044838E41D3F215100D6017B /* ImageProcessor.swift */,
+				044838E51D3F215100D6017B /* ImageProcessorType.swift */,
+			);
+			path = Processor;
+			sourceTree = "<group>";
+		};
+		044838E61D3F215100D6017B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				044838E71D3F215100D6017B /* ScalePicker.swift */,
+				044838E81D3F215100D6017B /* TwoSideSlider.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		046417801D3D50F300C9AE3F = {
+			isa = PBXGroup;
+			children = (
+				044838BB1D3F215100D6017B /* Source */,
+				0464178B1D3D50F300C9AE3F /* Athlee-ImageEditorKit */,
+				046417A01D3D50F400C9AE3F /* Athlee-ImageEditorKitTests */,
+				0464178A1D3D50F300C9AE3F /* Products */,
+				FF73D1AEBD9F9C27FE301A88 /* Pods */,
+				42CB5CD03A85A1A556BD7482 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0464178A1D3D50F300C9AE3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046417891D3D50F300C9AE3F /* Athlee-ImageEditorKit.app */,
+				0464179D1D3D50F400C9AE3F /* Athlee-ImageEditorKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0464178B1D3D50F300C9AE3F /* Athlee-ImageEditorKit */ = {
+			isa = PBXGroup;
+			children = (
+				0464181D1D3F0DF600C9AE3F /* ImagePickerKit */,
+				046418161D3F080700C9AE3F /* Extensions */,
+				046418021D3DD5FE00C9AE3F /* Views */,
+				046417AD1D3D534D00C9AE3F /* Controllers */,
+				0464178C1D3D50F300C9AE3F /* AppDelegate.swift */,
+				046417901D3D50F300C9AE3F /* Main.storyboard */,
+				046417931D3D50F300C9AE3F /* Assets.xcassets */,
+				046417951D3D50F300C9AE3F /* LaunchScreen.storyboard */,
+				046417981D3D50F300C9AE3F /* Info.plist */,
+			);
+			path = "Athlee-ImageEditorKit";
+			sourceTree = "<group>";
+		};
+		046417A01D3D50F400C9AE3F /* Athlee-ImageEditorKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				046417A11D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift */,
+				046417A31D3D50F400C9AE3F /* Info.plist */,
+			);
+			path = "Athlee-ImageEditorKitTests";
+			sourceTree = "<group>";
+		};
+		046417AD1D3D534D00C9AE3F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				046417B01D3D53EB00C9AE3F /* ContainerViewController.swift */,
+				046417AE1D3D53D500C9AE3F /* ImageViewController.swift */,
+				046417B21D3D540200C9AE3F /* FilterViewController.swift */,
+				046417B41D3D541000C9AE3F /* BrightnessViewController.swift */,
+				046417B61D3D541500C9AE3F /* CropViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		046418021D3DD5FE00C9AE3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				046418031D3DD60300C9AE3F /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		046418031D3DD60300C9AE3F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				046418041D3DD63E00C9AE3F /* FilterCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		046418161D3F080700C9AE3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				046418171D3F081000C9AE3F /* UIColor.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0464181D1D3F0DF600C9AE3F /* ImagePickerKit */ = {
+			isa = PBXGroup;
+			children = (
+				0464181E1D3F0E0300C9AE3F /* Cropable.swift */,
+				046418201D3F0E0C00C9AE3F /* CropableScrollViewDelegate.swift */,
+				046418221D3F0E6C00C9AE3F /* LinesView.swift */,
+			);
+			name = ImagePickerKit;
+			sourceTree = "<group>";
+		};
+		42CB5CD03A85A1A556BD7482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30FEF224D0001790198E0E91 /* Pods_Athlee_ImageEditorKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF73D1AEBD9F9C27FE301A88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6D6F5EEAA6737C7520DFF3B /* Pods-Athlee-ImageEditorKit.debug.xcconfig */,
+				23388D0110DDFB6BDDAA317F /* Pods-Athlee-ImageEditorKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046417881D3D50F300C9AE3F /* Athlee-ImageEditorKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046417A61D3D50F400C9AE3F /* Build configuration list for PBXNativeTarget "Athlee-ImageEditorKit" */;
+			buildPhases = (
+				498D58B74CA4A9B74DB3CDA6 /* [CP] Check Pods Manifest.lock */,
+				046417851D3D50F300C9AE3F /* Sources */,
+				046417861D3D50F300C9AE3F /* Frameworks */,
+				046417871D3D50F300C9AE3F /* Resources */,
+				445E85FB5EABB06E99ABF0F7 /* [CP] Embed Pods Frameworks */,
+				9703A31870DB4752FA3EBC66 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Athlee-ImageEditorKit";
+			productName = "Athlee-ImageEditorKit";
+			productReference = 046417891D3D50F300C9AE3F /* Athlee-ImageEditorKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0464179C1D3D50F400C9AE3F /* Athlee-ImageEditorKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046417A91D3D50F400C9AE3F /* Build configuration list for PBXNativeTarget "Athlee-ImageEditorKitTests" */;
+			buildPhases = (
+				046417991D3D50F400C9AE3F /* Sources */,
+				0464179A1D3D50F400C9AE3F /* Frameworks */,
+				0464179B1D3D50F400C9AE3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0464179F1D3D50F400C9AE3F /* PBXTargetDependency */,
+			);
+			name = "Athlee-ImageEditorKitTests";
+			productName = "Athlee-ImageEditorKitTests";
+			productReference = 0464179D1D3D50F400C9AE3F /* Athlee-ImageEditorKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046417811D3D50F300C9AE3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Athlee;
+				TargetAttributes = {
+					046417881D3D50F300C9AE3F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0464179C1D3D50F400C9AE3F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 046417881D3D50F300C9AE3F;
+					};
+				};
+			};
+			buildConfigurationList = 046417841D3D50F300C9AE3F /* Build configuration list for PBXProject "Athlee-ImageEditorKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046417801D3D50F300C9AE3F;
+			productRefGroup = 0464178A1D3D50F300C9AE3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046417881D3D50F300C9AE3F /* Athlee-ImageEditorKit */,
+				0464179C1D3D50F400C9AE3F /* Athlee-ImageEditorKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046417871D3D50F300C9AE3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046417971D3D50F300C9AE3F /* LaunchScreen.storyboard in Resources */,
+				046417941D3D50F300C9AE3F /* Assets.xcassets in Resources */,
+				046417921D3D50F300C9AE3F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0464179B1D3D50F400C9AE3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		445E85FB5EABB06E99ABF0F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Athlee-ImageEditorKit/Pods-Athlee-ImageEditorKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		498D58B74CA4A9B74DB3CDA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9703A31870DB4752FA3EBC66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Athlee-ImageEditorKit/Pods-Athlee-ImageEditorKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046417851D3D50F300C9AE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0464181F1D3F0E0300C9AE3F /* Cropable.swift in Sources */,
+				044838F11D3F215100D6017B /* UIImage.swift in Sources */,
+				044839061D3F215100D6017B /* ImageProcessor.swift in Sources */,
+				044838F61D3F215100D6017B /* FalseColorFilter.swift in Sources */,
+				044839091D3F215100D6017B /* TwoSideSlider.swift in Sources */,
+				044839021D3F215100D6017B /* VignetteEffectFilter.swift in Sources */,
+				044838EC1D3F215100D6017B /* Filter.swift in Sources */,
+				044839071D3F215100D6017B /* ImageProcessorType.swift in Sources */,
+				0448390D1D3F224C00D6017B /* FilterErrorPrinter.swift in Sources */,
+				044838F41D3F215100D6017B /* ColorMonochromeFilter.swift in Sources */,
+				044839001D3F215100D6017B /* PhotoEffectTransferFilter.swift in Sources */,
+				0448390F1D3F227000D6017B /* ColorControlsFilter.swift in Sources */,
+				044838F31D3F215100D6017B /* ColorInvertFilter.swift in Sources */,
+				046418051D3DD63E00C9AE3F /* FilterCell.swift in Sources */,
+				044838F91D3F215100D6017B /* PhotoEffectChromeFilter.swift in Sources */,
+				044838F01D3F215100D6017B /* Any.swift in Sources */,
+				044838E91D3F215100D6017B /* BlurFilter.swift in Sources */,
+				046417AF1D3D53D500C9AE3F /* ImageViewController.swift in Sources */,
+				044838FD1D3F215100D6017B /* PhotoEffectNoirFilter.swift in Sources */,
+				044838EB1D3F215100D6017B /* ColorEffectFilter.swift in Sources */,
+				044839031D3F215100D6017B /* VignetteFilter.swift in Sources */,
+				046418231D3F0E6C00C9AE3F /* LinesView.swift in Sources */,
+				044838F21D3F215100D6017B /* GaussianBlurFilter.swift in Sources */,
+				044838FC1D3F215100D6017B /* PhotoEffectMonoFilter.swift in Sources */,
+				046417B11D3D53EB00C9AE3F /* ContainerViewController.swift in Sources */,
+				044838FA1D3F215100D6017B /* PhotoEffectFadeFilter.swift in Sources */,
+				044838EF1D3F215100D6017B /* TileEffect.swift in Sources */,
+				044838F81D3F215100D6017B /* MaskToAlphaFilter.swift in Sources */,
+				046417B71D3D541500C9AE3F /* CropViewController.swift in Sources */,
+				044838FB1D3F215100D6017B /* PhotoEffectInstantFilter.swift in Sources */,
+				046417B31D3D540200C9AE3F /* FilterViewController.swift in Sources */,
+				044839081D3F215100D6017B /* ScalePicker.swift in Sources */,
+				044838EA1D3F215100D6017B /* ColorAdjustmentFilter.swift in Sources */,
+				046418181D3F081000C9AE3F /* UIColor.swift in Sources */,
+				0464178D1D3D50F300C9AE3F /* AppDelegate.swift in Sources */,
+				044839051D3F215100D6017B /* AffineClampFilter.swift in Sources */,
+				0448390B1D3F222C00D6017B /* Scanable.swift in Sources */,
+				046417B51D3D541000C9AE3F /* BrightnessViewController.swift in Sources */,
+				044838ED1D3F215100D6017B /* GeometryAdjustment.swift in Sources */,
+				044838FE1D3F215100D6017B /* PhotoEffectProcessFilter.swift in Sources */,
+				044839041D3F215100D6017B /* AffineTransformFilter.swift in Sources */,
+				044838FF1D3F215100D6017B /* PhotoEffectTonalFilter.swift in Sources */,
+				044838EE1D3F215100D6017B /* ImageFilter.swift in Sources */,
+				046418211D3F0E0C00C9AE3F /* CropableScrollViewDelegate.swift in Sources */,
+				044839011D3F215100D6017B /* SepiaToneFilter.swift in Sources */,
+				044838F51D3F215100D6017B /* ColorPosterizeFilter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046417991D3D50F400C9AE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046417A21D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0464179F1D3D50F400C9AE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046417881D3D50F300C9AE3F /* Athlee-ImageEditorKit */;
+			targetProxy = 0464179E1D3D50F400C9AE3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		046417901D3D50F300C9AE3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046417911D3D50F300C9AE3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046417951D3D50F300C9AE3F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046417961D3D50F300C9AE3F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046417A41D3D50F400C9AE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		046417A51D3D50F400C9AE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046417A71D3D50F400C9AE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D6F5EEAA6737C7520DFF3B /* Pods-Athlee-ImageEditorKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Athlee-ImageEditorKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		046417A81D3D50F400C9AE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23388D0110DDFB6BDDAA317F /* Pods-Athlee-ImageEditorKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Athlee-ImageEditorKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		046417AA1D3D50F400C9AE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Athlee-ImageEditorKitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athlee-ImageEditorKit.app/Athlee-ImageEditorKit";
+			};
+			name = Debug;
+		};
+		046417AB1D3D50F400C9AE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Athlee-ImageEditorKitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athlee-ImageEditorKit.app/Athlee-ImageEditorKit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046417841D3D50F300C9AE3F /* Build configuration list for PBXProject "Athlee-ImageEditorKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046417A41D3D50F400C9AE3F /* Debug */,
+				046417A51D3D50F400C9AE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046417A61D3D50F400C9AE3F /* Build configuration list for PBXNativeTarget "Athlee-ImageEditorKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046417A71D3D50F400C9AE3F /* Debug */,
+				046417A81D3D50F400C9AE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046417A91D3D50F400C9AE3F /* Build configuration list for PBXNativeTarget "Athlee-ImageEditorKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046417AA1D3D50F400C9AE3F /* Debug */,
+				046417AB1D3D50F400C9AE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046417811D3D50F300C9AE3F /* Project object */;
+}

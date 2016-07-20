@@ -1,0 +1,6 @@
+framework module Pods_Athlee_ImageEditorKit {
+  umbrella header "Pods-Athlee-ImageEditorKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
