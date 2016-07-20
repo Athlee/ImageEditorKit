@@ -1,0 +1,22 @@
+//
+//  UIImage.swift
+//  Athlee-ImageEditorKit
+//
+//  Created by mac on 19/07/16.
+//  Copyright © 2016 Athlee. All rights reserved.
+//
+
+import UIKit
+import CoreImage
+
+typealias _CIImage = CIImage
+
+extension UIImage {
+  var extent: CGRect {
+    guard let image = CGImage else {
+      return .zero
+    }
+    
+    return _CIImage(CGImage: image).extent
+  }
+}
