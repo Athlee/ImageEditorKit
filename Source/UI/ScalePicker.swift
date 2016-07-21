@@ -33,22 +33,37 @@ final class ScalePicker: UIControl {
     return Int((count - 1) / 2)
   }
   
-  var centeredIndexPath: NSIndexPath? {
+  var contentCenteredIndexPath: NSIndexPath? {
     let filtered = collectionView.indexPathsForVisibleItems().filter { path in
       guard let cell = collectionView.cellForItemAtIndexPath(path) else {
         return false
       }
       
-      return abs((cell.frame.midX - collectionView.contentOffset.x) - bounds.midX) < 32
+      return abs((cell.frame.midX - collectionView.contentOffset.x) - bounds.width / 2) < distance / 2
     }
     
-    return filtered.first
+    return filtered.last
+  }
+  
+  var centeredIndexPath: NSIndexPath? {
+    guard let centered = contentCenteredIndexPath, cell = collectionView.cellForItemAtIndexPath(centered) else {
+      return nil
+    }
+    
+    let x = (cell.frame.midX - collectionView.contentOffset.x - collectionView.frame.width / 2)
+    if x > 0 && centered.item > midItem {
+      return NSIndexPath(forItem: centered.item - 1, inSection: centered.section)
+    } else if x < 0 && centered.item < midItem {
+      return NSIndexPath(forItem: centered.item + 1, inSection: centered.section)
+    } else {
+      return centered
+    }
   }
   
   var maxX: CGFloat {
     let indexPath = NSIndexPath(forItem: count - 1 - offset, inSection: 0)
     if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
-      return cell.frame.maxX
+      return cell.frame.midX
     } else {
       return collectionView.contentSize.width
     }
@@ -57,7 +72,7 @@ final class ScalePicker: UIControl {
   var minX: CGFloat {
     let indexPath = NSIndexPath(forItem: offset, inSection: 0)
     if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
-      return cell.frame.minX
+      return cell.frame.midX
     } else {
       return 0
     }
@@ -187,6 +202,7 @@ extension ScalePicker {
       let mid = scrollView.convertPoint(cell.center, toView: self)
       let _d = (bounds.midX - mid.x) / distance
       let d = _d > 0 ? _d : (1 + _d)
+      
       value = Float(indexPath.item - midItem) * scalar + Float(d)
     }
   }
