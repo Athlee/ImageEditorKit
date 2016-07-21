@@ -1,12 +1,12 @@
 PODS:
-  - ImagePickerKit (0.2.2)
+  - ImagePickerKit (0.2.3)
 
 DEPENDENCIES:
-  - ImagePickerKit (~> 0.2.2)
+  - ImagePickerKit (~> 0.2.3)
 
 SPEC CHECKSUMS:
-  ImagePickerKit: 733c48c6f6c98d9f7400717f2e132ebbbf640652
+  ImagePickerKit: 21dcc7162dff7cf557f1e7f7f4bd6b8716d327af
 
-PODFILE CHECKSUM: 98ae645b5e1d9f58f4bbdf6e7c9e9123b9b6f6eb
+PODFILE CHECKSUM: ca864079c1326de0c3b1954af44b67d84175e781
 
 COCOAPODS: 1.0.1

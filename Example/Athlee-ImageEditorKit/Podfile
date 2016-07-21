@@ -1,5 +1,5 @@
 target 'Athlee-ImageEditorKit' do
 platform :ios, '9.0'
 use_frameworks!
-   pod 'ImagePickerKit', '~> 0.2.2’
+   pod 'ImagePickerKit', '~> 0.2.3’
 end
