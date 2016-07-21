@@ -11,7 +11,7 @@ import UIKit
 ///
 /// A protocol providing zooming features to crop the content.
 ///
-protocol Cropable {
+public protocol Cropable {
   /// A type for content view.
   associatedtype ChildView: UIView
   
@@ -25,14 +25,14 @@ protocol Cropable {
   var linesView: LinesView { get set }
   
   /// Top offset for cropable content. If your `cropView`
-  /// is constrained with `UINavigationBar` or anything on 
+  /// is constrained with `UINavigationBar` or anything on
   /// the top, set this offset so the content can be properly
   /// centered and scaled.
   ///
   /// Default value is `0.0`.
   var topOffset: CGFloat { get }
   
-  /// Determines whether the guidelines' grid should be 
+  /// Determines whether the guidelines' grid should be
   /// constantly showing on the cropping view.
   /// Default value is `false`.
   var alwaysShowGuidelines: Bool { get }
@@ -73,7 +73,7 @@ protocol Cropable {
   /// **ATTENTION**, default implementation
   /// is a placeholder!
   ///
-  func willEndZooming() 
+  func willEndZooming()
   
   ///
   /// Handles zoom gestures.
@@ -95,9 +95,9 @@ protocol Cropable {
   func highlightArea(highlight: Bool, animated: Bool)
 }
 
-// MARK: - Default implementations for UIImageView childs 
+// MARK: - Default implementations for UIImageView childs
 
-extension Cropable where ChildView == UIImageView {
+public extension Cropable where ChildView == UIImageView {
   ///
   /// Adds a cropable view with its content to the provided
   /// container view.
@@ -130,7 +130,7 @@ extension Cropable where ChildView == UIImageView {
   /// container view.
   ///
   /// - parameter view: A container view.
-  /// - parameter image: An image to use. 
+  /// - parameter image: An image to use.
   ///
   func addCropable(to view: UIView, with image: UIImage) {
     addCropable(to: view)
@@ -140,7 +140,7 @@ extension Cropable where ChildView == UIImageView {
   ///
   /// Adds an image to the UIImageView child view.
   ///
-  /// - parameter image: An image to use. 
+  /// - parameter image: An image to use.
   /// - parameter adjustingContent: Indicates whether the content should be adjusted or not. Default value is `true`.
   ///
   func addImage(image: UIImage, adjustingContent: Bool = true) {
@@ -153,13 +153,13 @@ extension Cropable where ChildView == UIImageView {
       
       updateContent()
       highlightArea(false, animated: false)
-    } 
+    }
   }
 }
 
-// MARK: - Default implementations 
+// MARK: - Default implementations
 
-extension Cropable {
+public extension Cropable {
   /// Top offset for cropable content. If your `cropView`
   /// is constrained with `UINavigationBar` or anything on
   /// the top, set this offset so the content can be properly
@@ -227,7 +227,7 @@ extension Cropable {
   
   ///
   /// This method is called whenever the zooming
-  /// is about to start. It might be useful if 
+  /// is about to start. It might be useful if
   /// you use a built-in `CropableScrollViewDelegate`.
   ///
   /// **ATTENTION**, default implementation
@@ -293,7 +293,7 @@ extension Cropable {
       } else {
         linesView.alpha = highlight ? 1 : 0
       }
-
+      
     }
     
     linesView.frame.size = CGSize(
@@ -306,3 +306,4 @@ extension Cropable {
     linesView.frame = intersection
   }
 }
+

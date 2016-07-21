@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreImage
+import ImagePickerKit
 
 final class ImageViewController: UIViewController, Cropable {
  
