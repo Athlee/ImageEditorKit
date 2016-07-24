@@ -9,25 +9,25 @@
 import UIKit
 import CoreImage
 
-struct FalseColorFilter: ColorEffectFilter {
+public struct FalseColorFilter: ColorEffectFilter {
   
   // MARK: Filter
   
-  let name = "CIFalseColor"
+  public let name = "CIFalseColor"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: ColorEffectFilter
   
-  var inputColor0: CIColor?
-  var inputColor1: CIColor?
+  public var inputColor0: CIColor?
+  public var inputColor1: CIColor?
   
   // MARK: Initialization
   
-  init(image: UIImage, inputColor0: UIColor, inputColor1: UIColor) {
+  public init(image: UIImage, inputColor0: UIColor, inputColor1: UIColor) {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputColor0 = CIColor(color: inputColor0)

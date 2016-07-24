@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol GeometryAdjustment: ImageFilter {
+public protocol GeometryAdjustment: ImageFilter {
   var inputTransform: NSValue? { get set }
 }

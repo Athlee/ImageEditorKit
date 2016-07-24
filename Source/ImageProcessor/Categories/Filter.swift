@@ -8,27 +8,27 @@
 
 import CoreImage
 
-enum FilterError: ErrorType {
+public enum FilterError: ErrorType {
   case FilterDoesNotExist(String)
 }
 
-protocol Filter: Scanable, Equatable, Hashable {
+public protocol Filter: Scanable, Equatable, Hashable {
   var name: String { get }
 }
 
-extension Filter {
+public extension Filter {
   var ignoredProperties: [String] {
     return ["name"]
   }
 }
 
-extension Filter {
+public extension Filter {
   var hashValue: Int {
     return (try? filter())?.hashValue ?? Int.max
   }
 }
 
-extension Filter {
+public extension Filter {
   func filter() throws -> CIFilter {
     if let filter = CIFilter(name: name) {
       return filter
@@ -38,7 +38,7 @@ extension Filter {
   }
 }
 
-func ==<T : Filter>(lhs: T, rhs: T) -> Bool {
+public func ==<T : Filter>(lhs: T, rhs: T) -> Bool {
   guard let lhsFilter = try? lhs.filter() else { return false }
   guard let rhsFilter = try? rhs.filter() else { return false }
   

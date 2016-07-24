@@ -9,24 +9,24 @@
 import UIKit
 import CoreImage
 
-struct SepiaToneFilter: ColorEffectFilter {
+public struct SepiaToneFilter: ColorEffectFilter {
   
   // MARK: Filter
   
-  let name = "CISepiaTone"
+  public let name = "CISepiaTone"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: ColorEffectFilter
   
-  var inputIntensity: NSNumber?
+  public var inputIntensity: NSNumber?
   
   // MARK: Initialization
   
-  init(image: UIImage, intensity: Float = 1.0) {
+  public init(image: UIImage, intensity: Float = 1.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputIntensity = NSNumber(float: intensity)

@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-protocol ColorEffectFilter: ImageFilter {
+public protocol ColorEffectFilter: ImageFilter {
   var inputRedCoefficients: CIVector? { get set }
   var inputGreenCoefficients: CIVector? { get set }
   var inputBlueCoefficients: CIVector? { get set }
@@ -26,7 +26,7 @@ protocol ColorEffectFilter: ImageFilter {
   var inputRadius: NSNumber? { get set }
 }
 
-extension ColorEffectFilter {
+public extension ColorEffectFilter {
   var inputRedCoefficients: CIVector? {
     get { return nil }
     set { }

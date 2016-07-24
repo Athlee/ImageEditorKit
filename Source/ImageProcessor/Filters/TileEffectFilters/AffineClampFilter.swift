@@ -9,35 +9,20 @@
 import UIKit
 import CoreImage
 
-struct AffineClampFilter: TileEffect {
+public struct AffineClampFilter: TileEffect {
   
   // MARK: Filter
   
-  let name = "CIAffineClamp"
+  public let name = "CIAffineClamp"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: TileEffect 
   
-  var inputTransform: NSValue?
-  
-  var inputCenter: CIVector? = nil
-  var inputAngle: NSNumber? = nil
-  var inputAcuteAngle: NSNumber? = nil
-  var inputWidth: NSNumber? = nil
-  var inputCount: NSNumber? = nil
-  var inputScale: NSNumber? = nil
-  var inputTopLeft: CIVector? = nil
-  var inputTopRight: CIVector? = nil
-  var inputBottomRight: CIVector? = nil
-  var inputBottomLeft: CIVector? = nil
-  var inputPoint: CIVector? = nil
-  var inputSize: NSNumber? = nil
-  var inputRotation: NSNumber? = nil
-  var inputDecay: NSNumber? = nil
+  public var inputTransform: NSValue?
   
   // MARK: Initialization
   

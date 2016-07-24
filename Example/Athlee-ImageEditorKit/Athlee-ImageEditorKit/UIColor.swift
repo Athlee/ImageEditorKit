@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+internal extension UIColor {
   convenience init(hex: Int) {
     let red = CGFloat((hex & 0xFF0000) >> 16) / CGFloat(255)
     let green = CGFloat((hex & 0xFF00) >> 8) / CGFloat(255)

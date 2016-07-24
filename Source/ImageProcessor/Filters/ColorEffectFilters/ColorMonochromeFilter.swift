@@ -9,25 +9,25 @@
 import UIKit
 import CoreImage
 
-struct ColorMonochromeFilter: ColorEffectFilter {
+public struct ColorMonochromeFilter: ColorEffectFilter {
  
   // MARK: Filter
   
-  let name = "CIColorMonochrome"
+  public let name = "CIColorMonochrome"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: ColorEffectFilter
   
-  var inputColor: CIColor?
-  var inputIntensity: NSNumber?
+  public var inputColor: CIColor?
+  public var inputIntensity: NSNumber?
   
   // MARK: Initialization
   
-  init(image: UIImage, color: UIColor, intensity: Float = 1.0) {
+  public init(image: UIImage, color: UIColor, intensity: Float = 1.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputColor = CIColor(color: color)

@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ImageProcessorType {
+public protocol ImageProcessorType {
   func process<T : Filter>(image image: UIImage, filter: T, completion: (UIImage?) -> Void)
 }

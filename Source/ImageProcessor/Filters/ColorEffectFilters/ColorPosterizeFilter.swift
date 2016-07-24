@@ -9,24 +9,24 @@
 import UIKit
 import CoreImage
 
-struct ColorPosterizeFilter: ColorEffectFilter {
+public struct ColorPosterizeFilter: ColorEffectFilter {
   
   // MARK: Filter
   
-  let name = "CIColorPosterize"
+  public let name = "CIColorPosterize"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: ColorEffectFilter
   
-  var inputLevels: NSNumber?
+  public var inputLevels: NSNumber?
   
   // MARK: Initialization
   
-  init(image: UIImage, inputLevels: Float = 6.0) {
+  public init(image: UIImage, inputLevels: Float = 6.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputLevels = NSNumber(float: inputLevels)

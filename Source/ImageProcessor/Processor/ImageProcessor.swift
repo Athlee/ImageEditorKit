@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-struct ImageProcessor: ImageProcessorType {
+public struct ImageProcessor: ImageProcessorType {
   
   private class Store {
     var filters: [String: CIFilter] = [:]
@@ -31,13 +31,13 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK: ImageProcessorType properties
   
-  func process<T : Filter>(image image: UIImage, filter: T, completion: (UIImage?) -> Void) {
+  public func process<T : Filter>(image image: UIImage, filter: T, completion: (UIImage?) -> Void) {
     print("[ImageProcessor]: Unable to find appropriate processing method's overload...")
   }
   
   // MARK: BlurFilter
   
-  func process<T : BlurFilter>(image image: UIImage,
+  public func process<T : BlurFilter>(image image: UIImage,
                filter: T,
                completion: (UIImage?) -> Void) {
     let transformValue = NSValue(CGAffineTransform: CGAffineTransformMakeScale(1, 1))
@@ -75,7 +75,7 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK: TileEffect
   
-  func process<T : TileEffect>(image image: UIImage,
+  public func process<T : TileEffect>(image image: UIImage,
                filter: T,
                completion: (UIImage?) -> Void) {
     add(filter: filter)
@@ -98,7 +98,7 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK: ColorEffectFilters
   
-  func process<T : ColorEffectFilter>(image image: UIImage,
+  public func process<T : ColorEffectFilter>(image image: UIImage,
                filter: T,
                completion: (UIImage?) -> Void) {
     add(filter: filter)
@@ -121,7 +121,7 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK: ColorAdjustment 
   
-  func process<T : ColorAdjustmentFilter>(image image: UIImage,
+  public func process<T : ColorAdjustmentFilter>(image image: UIImage,
                filter: T,
                completion: (UIImage?) -> Void) {
     add(filter: filter)
@@ -144,7 +144,7 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK: GeometryAdjustment
   
-  func process<T : GeometryAdjustment>(image image: UIImage,
+  public func process<T : GeometryAdjustment>(image image: UIImage,
                filter: T,
                completion: (UIImage?) -> Void) {
     add(filter: filter)
@@ -167,10 +167,10 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK: Processing CIImage
   
-  typealias Result = (image: CIImage, originalExtent: CGRect)
-  typealias Setup = (CIImage, CIFilter) -> Void
+  public typealias Result = (image: CIImage, originalExtent: CGRect)
+  public typealias Setup = (CIImage, CIFilter) -> Void
   
-  func processedImageResult<T : Filter>(with image: UIImage,
+  public func processedImageResult<T : Filter>(with image: UIImage,
                             filter: T,
                             setup: Setup) -> Result? {
     guard let image = preparedImage(with: image, filter: filter) else {
@@ -180,7 +180,7 @@ struct ImageProcessor: ImageProcessorType {
     return processedImageResult(with: image, filter: filter, setup: setup)
   }
   
-  func processedImageResult<T : Filter>(with image: CIImage,
+  public func processedImageResult<T : Filter>(with image: CIImage,
                             filter: T,
                             setup: Setup) -> Result? {
     guard let _filter = store.filters[filter.name] else {
@@ -198,7 +198,7 @@ struct ImageProcessor: ImageProcessorType {
   
   // MARK:
   
-  func add<T : Filter>(filter filter: T) {
+  private func add<T : Filter>(filter filter: T) {
     guard store.filters[filter.name] == nil else { return }
     
     do {
@@ -211,7 +211,7 @@ struct ImageProcessor: ImageProcessorType {
     }
   }
   
-  func preparedImage<T : Filter>(with image: UIImage, filter: T) -> CIImage? {
+  private func preparedImage<T : Filter>(with image: UIImage, filter: T) -> CIImage? {
     guard let _image = image.CGImage else {
       return nil
     }
@@ -221,7 +221,7 @@ struct ImageProcessor: ImageProcessorType {
     return image
   }
   
-  func convertedImage(from image: CIImage, extent: CGRect) -> UIImage {
+  private func convertedImage(from image: CIImage, extent: CGRect) -> UIImage {
     let _output = self.context.createCGImage(image,
                                              fromRect: extent)
     let output = UIImage(CGImage: _output)
@@ -230,7 +230,7 @@ struct ImageProcessor: ImageProcessorType {
   }
   
   
-  func setValues<T : Filter>(for filter: CIFilter, with _filter: T) {
+  private func setValues<T : Filter>(for filter: CIFilter, with _filter: T) {
     let scanned = _filter.scanned()
     for (key, value) in scanned {
       guard let value = value as? AnyObject else {

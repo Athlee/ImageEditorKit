@@ -9,12 +9,12 @@
 import UIKit
 import CoreImage
 
-protocol ImageFilter: Filter {
+public protocol ImageFilter: Filter {
   var image: UIImage { get set }
   var inputImage: CIImage? { get set }
 }
 
-extension ImageFilter {
+public extension ImageFilter {
   var ignoredProperties: [String] {
     return ["name", "image"]
   }

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = "ImageEditorKit"
-  s.version               = "0.1.0"
+  s.version               = "0.1.5"
   s.summary               = "A simple and interactive framework for editing photos!"
   s.homepage              = "https://github.com/Athlee/ImageEditorKit"
   s.license               = { :type => "MIT", :file => "LICENSE" }
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform              = :ios, "9.0"
   s.ios.deployment_target = "9.0"
   s.source                = { :git => "https://github.com/Athlee/ImageEditorKit.git", :tag => s.version }
-  s.source_files          = "Source/*.swift"
+  s.source_files          = "Source/**/*.swift"
   s.requires_arc          = true
 
 end

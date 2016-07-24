@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol Scanable {
+public protocol Scanable {
   var ignoredProperties: [String] { get }
   
   func scanned() -> [String: Any]
 }
 
-extension Scanable {
+public extension Scanable {
   func scanned() -> [String: Any] {
     let mirror = Mirror(reflecting: self)
     var result: [String: Any] = [:]

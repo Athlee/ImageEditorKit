@@ -9,20 +9,20 @@
 import UIKit
 import CoreImage
 
-struct PhotoEffectProcessFilter: ColorEffectFilter {
+public struct PhotoEffectProcessFilter: ColorEffectFilter {
   
   // MARK: Filter
   
-  let name = "CIPhotoEffectProcess"
+  public let name = "CIPhotoEffectProcess"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: Initialization
   
-  init(image: UIImage) {
+  public init(image: UIImage) {
     self.image = image
     self.inputImage = CIImage(image: image)
   }

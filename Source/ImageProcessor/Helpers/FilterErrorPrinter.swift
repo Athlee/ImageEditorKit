@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct FilterErrorPrinter {
-  static func printError(error: FilterError) {
+public struct FilterErrorPrinter {
+  public static func printError(error: FilterError) {
     let message: String
     switch error {
     case .FilterDoesNotExist(let name):

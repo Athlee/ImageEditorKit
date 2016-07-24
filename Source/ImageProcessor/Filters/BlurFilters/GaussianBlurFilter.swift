@@ -9,31 +9,31 @@
 import UIKit
 import CoreImage
 
-struct GaussianBlurFilter: BlurFilter {
+public struct GaussianBlurFilter: BlurFilter {
   
   // MARK: Filter
   
-  let name = "CIGaussianBlur"
+  public let name = "CIGaussianBlur"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: BlurFilter
   
-  var inputRadius: NSNumber?
+  public var inputRadius: NSNumber?
   
-  var inputMask: CIImage? = nil
-  var inputAngle: NSNumber? = nil
-  var inputNoiseLevel: NSNumber? = nil
-  var inputSharpness: NSNumber? = nil
-  var inputCenter: CIVector? = nil
-  var inputAmount: NSNumber? = nil
+  public var inputMask: CIImage? = nil
+  public var inputAngle: NSNumber? = nil
+  public var inputNoiseLevel: NSNumber? = nil
+  public var inputSharpness: NSNumber? = nil
+  public var inputCenter: CIVector? = nil
+  public var inputAmount: NSNumber? = nil
   
   // MARK: Initialization
   
-  init(image: UIImage, inputRadius: Float) {
+  public init(image: UIImage, inputRadius: Float) {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputRadius = NSNumber(float: inputRadius)

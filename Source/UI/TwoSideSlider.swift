@@ -9,31 +9,31 @@
 import UIKit
 
 @IBDesignable
-final class TwoSideSlider: UIControl {
+public final class TwoSideSlider: UIControl {
   
   // MARK: Outlets
   
-  @IBInspectable var minValue: CGFloat = -100
-  @IBInspectable var maxValue: CGFloat = 50
+  @IBInspectable public var minValue: CGFloat = -100
+  @IBInspectable public var maxValue: CGFloat = 50
   
-  @IBInspectable var lineWidth: CGFloat = 1
-  @IBInspectable var lineColor: UIColor = .blackColor()
-  @IBInspectable var lineTintColor: UIColor = .redColor()
+  @IBInspectable public var lineWidth: CGFloat = 1
+  @IBInspectable public var lineColor: UIColor = .blackColor()
+  @IBInspectable public var lineTintColor: UIColor = .redColor()
   
-  @IBInspectable var thumbImage: UIImage = UIImage() {
+  @IBInspectable public var thumbImage: UIImage = UIImage() {
     didSet {
       thumb.image = thumbImage
     }
   }
   
-  @IBInspectable var centerThickHeight: CGFloat = 8
-  @IBInspectable var centerThickColor: UIColor = .redColor()
+  @IBInspectable public var centerThickHeight: CGFloat = 8
+  @IBInspectable public var centerThickColor: UIColor = .redColor()
   
   // MARK: Properties 
   
-  var midValue: CGFloat = 0
+  public var midValue: CGFloat = 0
   
-  var currentValue: CGFloat = 0 {
+  public var currentValue: CGFloat = 0 {
     didSet {
       label.text = "\(Int(currentValue))"
       adjustLabelPosition()
@@ -56,11 +56,11 @@ final class TwoSideSlider: UIControl {
   
   // MARK: Life cycle
   
-  override func layoutSubviews() {
+  public override func layoutSubviews() {
     super.layoutSubviews()
   }
   
-  override func drawRect(rect: CGRect) {
+  public override func drawRect(rect: CGRect) {
     guard !moving else {
       return
     }
@@ -104,16 +104,16 @@ final class TwoSideSlider: UIControl {
     adjustLabelPosition()
   }
   
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     super.init(frame: frame)
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
   
   
-  override func awakeFromNib() {
+  public override func awakeFromNib() {
     super.awakeFromNib()
     let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(TwoSideSlider.didRecognizePanGesture(_:)))
     addGestureRecognizer(panRecognizer)
@@ -121,7 +121,7 @@ final class TwoSideSlider: UIControl {
   
   // MARK: IBActions
   
-  @IBAction func didRecognizePanGesture(recognizer: UIPanGestureRecognizer) {
+  @IBAction internal func didRecognizePanGesture(recognizer: UIPanGestureRecognizer) {
     let point = recognizer.locationInView(self)
     moving = true
     
@@ -151,7 +151,7 @@ final class TwoSideSlider: UIControl {
   
   // MARK: UI movement
   
-  func moveThumb(dx dx: CGFloat) {
+  private func moveThumb(dx dx: CGFloat) {
     var dx = dx
     
     if dx < 0 && thumb.frame.minX + dx < 0 {
@@ -165,7 +165,7 @@ final class TwoSideSlider: UIControl {
     moveThickLine(dx: dx)
   }
   
-  func adjustLabelPosition() {
+  private func adjustLabelPosition() {
     label.sizeToFit()
     label.center = CGPoint(x: thumb.center.x, y: thumb.frame.minY - label.frame.height)
     if currentValue == midValue {
@@ -175,7 +175,7 @@ final class TwoSideSlider: UIControl {
     }
   }
   
-  func moveThickLine(dx dx: CGFloat) {
+  private func moveThickLine(dx dx: CGFloat) {
     moveLeftLine(dx: dx)
     moveRightLine(dx: dx)
     
@@ -194,7 +194,7 @@ final class TwoSideSlider: UIControl {
     }
   }
   
-  func moveLeftLine(dx dx: CGFloat) {
+  private func moveLeftLine(dx dx: CGFloat) {
     var dx = dx
     if dx < 0 {
       guard thumb.center.x < bounds.midX else {
@@ -228,7 +228,7 @@ final class TwoSideSlider: UIControl {
     }
   }
   
-  func moveRightLine(dx dx: CGFloat) {
+  private func moveRightLine(dx dx: CGFloat) {
     var dx = dx
     if dx < 0 {
       if rightLine.frame.width > 0 {
@@ -258,13 +258,13 @@ final class TwoSideSlider: UIControl {
     }
   }
   
-  func resetLines() {
+  public func resetLines() {
     leftLine.frame.size.width = 0
     rightLine.frame.origin.x = bounds.midX
     rightLine.frame.size.width = 0
   }
   
-  func reset() {
+  public func reset() {
     currentValue = 0
     thumb.center = CGPoint(x: bounds.midX, y: bounds.midY)
     resetLines()

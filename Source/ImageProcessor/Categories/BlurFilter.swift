@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-protocol BlurFilter: ImageFilter {
+public protocol BlurFilter: ImageFilter {
   var inputRadius: NSNumber? { get set }
   var inputMask: CIImage? { get set }
   var inputAngle: NSNumber? { get set }

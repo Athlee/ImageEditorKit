@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-protocol ColorAdjustmentFilter: ImageFilter {
+public protocol ColorAdjustmentFilter: ImageFilter {
   var inputMinComponents: CIVector? { get set }
   var inputMaxComponents: CIVector? { get set }
   var inputSaturation: NSNumber? { get set }
@@ -38,7 +38,7 @@ protocol ColorAdjustmentFilter: ImageFilter {
   var inputColor: CIColor? { get set }
 }
 
-extension ColorAdjustmentFilter {
+public extension ColorAdjustmentFilter {
   var inputMinComponents: CIVector? {
     get {
       return nil

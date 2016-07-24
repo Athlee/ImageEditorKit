@@ -9,14 +9,14 @@
 import UIKit
 import CoreImage
 
-struct AffineTransformFilter: GeometryAdjustment {
-  var image: UIImage
-  var inputImage: CIImage?
-  var inputTransform: NSValue?
+public struct AffineTransformFilter: GeometryAdjustment {
+  public var image: UIImage
+  public var inputImage: CIImage?
+  public var inputTransform: NSValue?
   
-  let name = "CIAffineTransform"
+  public let name = "CIAffineTransform"
   
-  init(image: UIImage, inputTransform: CGAffineTransform) {
+  public init(image: UIImage, inputTransform: CGAffineTransform) {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputTransform = NSValue(CGAffineTransform: inputTransform)

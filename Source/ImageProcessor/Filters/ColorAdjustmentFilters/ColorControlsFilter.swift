@@ -9,26 +9,26 @@
 import UIKit
 import CoreImage
 
-struct ColorControlsFilter: ColorAdjustmentFilter {
+public struct ColorControlsFilter: ColorAdjustmentFilter {
   
   // MARK: Filter
   
-  let name = "CIColorControls"
+  public let name = "CIColorControls"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: ColorAdjustmentFilter
   
-  var inputSaturation: NSNumber?
-  var inputBrightness: NSNumber?
-  var inputContrast: NSNumber?
+  public var inputSaturation: NSNumber?
+  public var inputBrightness: NSNumber?
+  public var inputContrast: NSNumber?
   
   // MARK: Initialization
   
-  init(image: UIImage,
+  public init(image: UIImage,
        inputSaturation: Float = 1.0,
        inputBrightness: Float,
        inputContrast: Float = 1.0) {

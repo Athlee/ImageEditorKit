@@ -11,7 +11,7 @@ import CoreImage
 
 typealias _CIImage = CIImage
 
-extension UIImage {
+internal extension UIImage {
   var extent: CGRect {
     guard let image = CGImage else {
       return .zero

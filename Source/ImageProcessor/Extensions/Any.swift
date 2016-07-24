@@ -8,7 +8,7 @@
 
 import Foundation
 
-func unwrapped(any: Any) -> Any {
+internal func unwrapped(any: Any) -> Any {
   var value = any
   
   while true {

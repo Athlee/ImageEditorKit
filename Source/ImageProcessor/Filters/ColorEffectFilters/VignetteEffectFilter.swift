@@ -9,26 +9,26 @@
 import UIKit
 import CoreImage
 
-struct VignetteEffectFilter: ColorEffectFilter {
+public struct VignetteEffectFilter: ColorEffectFilter {
   
   // MARK: Filter
   
-  let name = "CIVignetteEffect"
+  public let name = "CIVignetteEffect"
   
   // MARK: ImageFilter
   
-  var image: UIImage
-  var inputImage: CIImage?
+  public var image: UIImage
+  public var inputImage: CIImage?
   
   // MARK: ColorEffectFilter
   
-  var inputCenter: CIVector?
-  var inputIntensity: NSNumber?
-  var inputRadius: NSNumber?
+  public var inputCenter: CIVector?
+  public var inputIntensity: NSNumber?
+  public var inputRadius: NSNumber?
   
   // MARK: Initialization
   
-  init(image: UIImage,
+  public init(image: UIImage,
        inputCenter: CGPoint = CGPoint(x: 150, y: 150),
        inputRadius: Float = 1.0,
        intensity: Float = 0.0) {
