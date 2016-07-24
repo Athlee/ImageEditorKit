@@ -29,6 +29,10 @@ public struct ImageProcessor: ImageProcessorType {
     return store.queue
   }
   
+  // Initialization
+  
+  public init() { }
+  
   // MARK: ImageProcessorType properties
   
   public func process<T : Filter>(image image: UIImage, filter: T, completion: (UIImage?) -> Void) {
