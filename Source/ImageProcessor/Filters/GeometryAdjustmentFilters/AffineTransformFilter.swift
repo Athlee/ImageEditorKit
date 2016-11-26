@@ -19,6 +19,6 @@ public struct AffineTransformFilter: GeometryAdjustment {
   public init(image: UIImage, inputTransform: CGAffineTransform) {
     self.image = image
     self.inputImage = CIImage(image: image)
-    self.inputTransform = NSValue(CGAffineTransform: inputTransform)
+    self.inputTransform = NSValue(cgAffineTransform: inputTransform)
   }
 }

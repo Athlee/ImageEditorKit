@@ -31,7 +31,7 @@ public struct ColorMonochromeFilter: ColorEffectFilter {
     self.image = image
     self.inputImage = CIImage(image: image)
     self.inputColor = CIColor(color: color)
-    self.inputIntensity = NSNumber(float: intensity)
+    self.inputIntensity = NSNumber(value: intensity as Float)
   }
   
 }

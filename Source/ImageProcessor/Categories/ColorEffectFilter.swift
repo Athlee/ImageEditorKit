@@ -14,8 +14,8 @@ public protocol ColorEffectFilter: ImageFilter {
   var inputGreenCoefficients: CIVector? { get set }
   var inputBlueCoefficients: CIVector? { get set }
   var inputCubeDimension: NSNumber? { get set }
-  var inputCubeData: NSData? { get set }
-  var inputColorSpace: CGColorSpaceRef? { get set }
+  var inputCubeData: Data? { get set }
+  var inputColorSpace: CGColorSpace? { get set }
   var inputGradientImage: CIImage? { get set }
   var inputColor: CIColor? { get set }
   var inputIntensity: NSNumber? { get set }
@@ -47,12 +47,12 @@ public extension ColorEffectFilter {
     set { }
   }
   
-  var inputCubeData: NSData? {
+  var inputCubeData: Data? {
     get { return nil }
     set { }
   }
   
-  var inputColorSpace: CGColorSpaceRef? {
+  var inputColorSpace: CGColorSpace? {
     get { return nil }
     set { }
   }

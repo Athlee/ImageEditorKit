@@ -11,9 +11,9 @@ import UIKit
 final class ContainerViewController: UIViewController {
   
   enum State {
-    case Filters
-    case Brightness
-    case Crop
+    case filters
+    case brightness
+    case crop
   }
   
   // MARK: Outlets
@@ -35,7 +35,7 @@ final class ContainerViewController: UIViewController {
     static var crop: CropViewController!
   }
   
-  var state: State = .Filters { didSet { updateVisibility() } }
+  var state: State = .filters { didSet { updateVisibility() } }
   
   // MARK: Life cycle 
   
@@ -46,22 +46,22 @@ final class ContainerViewController: UIViewController {
     updateVisibility()
   }
   
-  override func prefersStatusBarHidden() -> Bool {
+  override var prefersStatusBarHidden : Bool {
     return true
   }
   
   // MARK: Actions
   
-  @IBAction func didPressFilterButton(sender: AnyObject) {
-    state = .Filters
+  @IBAction func didPressFilterButton(_ sender: AnyObject) {
+    state = .filters
   }
   
-  @IBAction func didPressBrightnessButton(sender: AnyObject) {
-    state = .Brightness
+  @IBAction func didPressBrightnessButton(_ sender: AnyObject) {
+    state = .brightness
   }
   
-  @IBAction func didPressCropButton(sender: AnyObject) {
-    state = .Crop
+  @IBAction func didPressCropButton(_ sender: AnyObject) {
+    state = .crop
   }
   
   // MARK: Utils 
@@ -77,7 +77,7 @@ final class ContainerViewController: UIViewController {
         
       case is BrightnessViewController:
         Children.brightness = child as! BrightnessViewController
-        Children.brightness.parent = self
+        Children.brightness._parent = self
         
       case is CropViewController:
         Children.crop = child as! CropViewController
@@ -93,25 +93,25 @@ final class ContainerViewController: UIViewController {
     brightnessView.alpha = 0
     cropView.alpha = 0
     
-    filtersButton.selected = false
-    brightnessButton.selected = false
-    cropButton.selected = false
+    filtersButton.isSelected = false
+    brightnessButton.isSelected = false
+    cropButton.isSelected = false
     
     switch state {
-    case .Filters:
+    case .filters:
       title = "Select a filter"
       filtersView.alpha = 1
-      filtersButton.selected = true
+      filtersButton.isSelected = true
       Children.image.croppingBegan(false)
-    case .Brightness:
+    case .brightness:
       title = "Adjust brightness"
       brightnessView.alpha = 1
-      brightnessButton.selected = true
+      brightnessButton.isSelected = true
       Children.image.croppingBegan(false)
-    case .Crop:
+    case .crop:
       title = "Crop the image"
       cropView.alpha = 1
-      cropButton.selected = true
+      cropButton.isSelected = true
       Children.image.croppingBegan(true)
     }
   }

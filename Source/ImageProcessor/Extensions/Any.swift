@@ -8,12 +8,12 @@
 
 import Foundation
 
-internal func unwrapped(any: Any) -> Any {
+internal func unwrapped(_ any: Any) -> Any {
   var value = any
   
   while true {
     let mirror = Mirror(reflecting: value)
-    if let style = mirror.displayStyle where style == .Optional {
+    if let style = mirror.displayStyle, style == .optional {
       guard let first = mirror.children.first else {
         break
       }

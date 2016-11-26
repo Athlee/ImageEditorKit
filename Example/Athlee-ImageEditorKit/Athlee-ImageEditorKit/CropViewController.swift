@@ -25,31 +25,31 @@ final class CropViewController: UIViewController {
   
   // MARK: Life cycle 
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     scalePicker.reset()
   }
   
   // MARK: IBActions 
   
-  @IBAction func didPressResetButton(sender: AnyObject) {
+  @IBAction func didPressResetButton(_ sender: AnyObject) {
     scalePicker.reset()
-    transformView.transform = CGAffineTransformIdentity
+    transformView.transform = CGAffineTransform.identity
     theta = 0
     beta = 0
   }
   
-  @IBAction func didChangeValue(sender: ScalePicker) {
+  @IBAction func didChangeValue(_ sender: ScalePicker) {
     let value = sender.value
     beta = value
     let angle = theta + value
-    let transform = CGAffineTransformMakeRotation(angle.toRadians())
+    let transform = CGAffineTransform(rotationAngle: angle.toRadians())
     transformView.transform = transform
   }
   
-  @IBAction func didPressRotateButton(sender: AnyObject) {
+  @IBAction func didPressRotateButton(_ sender: AnyObject) {
     theta += -90
-    let transform = CGAffineTransformMakeRotation((theta + beta).toRadians())
+    let transform = CGAffineTransform(rotationAngle: (theta + beta).toRadians())
     transformView.transform = transform
   }
 }

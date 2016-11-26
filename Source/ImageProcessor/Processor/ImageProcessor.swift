@@ -11,11 +11,11 @@ import CoreImage
 
 public struct ImageProcessor: ImageProcessorType {
   
-  private class Store {
+  fileprivate class Store {
     var filters: [String: CIFilter] = [:]
     
-    private lazy var queue: NSOperationQueue = {
-      let queue = NSOperationQueue()
+    fileprivate lazy var queue: OperationQueue = {
+      let queue = OperationQueue()
       queue.maxConcurrentOperationCount = 1
       return queue
     }()
@@ -23,9 +23,9 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: Properties
   
-  private let context = CIContext()
-  private let store = Store()
-  private var queue: NSOperationQueue {
+  fileprivate let context = CIContext()
+  fileprivate let store = Store()
+  fileprivate var queue: OperationQueue {
     return store.queue
   }
   
@@ -35,16 +35,16 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: ImageProcessorType properties
   
-  public func process<T : Filter>(image image: UIImage, filter: T, completion: (UIImage?) -> Void) {
+  public func process<T : Filter>(image: UIImage, filter: T, completion: (UIImage?) -> Void) {
     print("[ImageProcessor]: Unable to find appropriate processing method's overload...")
   }
   
   // MARK: BlurFilter
   
-  public func process<T : BlurFilter>(image image: UIImage,
+  public func process<T : BlurFilter>(image: UIImage,
                filter: T,
-               completion: (UIImage?) -> Void) {
-    let transformValue = NSValue(CGAffineTransform: CGAffineTransformMakeScale(1, 1))
+               completion: @escaping (UIImage?) -> Void) {
+    let transformValue = NSValue(cgAffineTransform: CGAffineTransform(scaleX: 1, y: 1))
     let transform = AffineClampFilter(image: image, inputTransform: transformValue)
     
     add(filter: filter)
@@ -71,7 +71,7 @@ public struct ImageProcessor: ImageProcessorType {
     }
 
     queue.cancelAllOperations()
-    queue.addOperationWithBlock {
+    queue.addOperation {
       let output = self.convertedImage(from: result.image, extent: scaleResult.originalExtent)
       completion(output)
     }
@@ -79,9 +79,9 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: TileEffect
   
-  public func process<T : TileEffect>(image image: UIImage,
+  public func process<T : TileEffect>(image: UIImage,
                filter: T,
-               completion: (UIImage?) -> Void) {
+               completion: @escaping (UIImage?) -> Void) {
     add(filter: filter)
     
     let _result = processedImageResult(with: image, filter: filter) { image, _filter in
@@ -94,7 +94,7 @@ public struct ImageProcessor: ImageProcessorType {
     }
     
     queue.cancelAllOperations()
-    queue.addOperationWithBlock {
+    queue.addOperation {
       let output = self.convertedImage(from: result.image, extent: filter.inputImage?.extent ?? .zero)
       completion(output)
     }
@@ -102,9 +102,9 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: ColorEffectFilters
   
-  public func process<T : ColorEffectFilter>(image image: UIImage,
+  public func process<T : ColorEffectFilter>(image: UIImage,
                filter: T,
-               completion: (UIImage?) -> Void) {
+               completion: @escaping (UIImage?) -> Void) {
     add(filter: filter)
     
     let _result = processedImageResult(with: image, filter: filter) { image, _filter in
@@ -117,7 +117,7 @@ public struct ImageProcessor: ImageProcessorType {
     }
     
     queue.cancelAllOperations()
-    queue.addOperationWithBlock {
+    queue.addOperation {
       let output = self.convertedImage(from: result.image, extent: filter.inputImage?.extent ?? .zero)
       completion(output)
     }
@@ -125,9 +125,9 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: ColorAdjustment 
   
-  public func process<T : ColorAdjustmentFilter>(image image: UIImage,
+  public func process<T : ColorAdjustmentFilter>(image: UIImage,
                filter: T,
-               completion: (UIImage?) -> Void) {
+               completion: @escaping (UIImage?) -> Void) {
     add(filter: filter)
     
     let _result = processedImageResult(with: image, filter: filter) { image, _filter in
@@ -140,7 +140,7 @@ public struct ImageProcessor: ImageProcessorType {
     }
     
     queue.cancelAllOperations()
-    queue.addOperationWithBlock {
+    queue.addOperation {
       let output = self.convertedImage(from: result.image, extent: filter.inputImage?.extent ?? .zero)
       completion(output)
     }
@@ -148,9 +148,9 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: GeometryAdjustment
   
-  public func process<T : GeometryAdjustment>(image image: UIImage,
+  public func process<T : GeometryAdjustment>(image: UIImage,
                filter: T,
-               completion: (UIImage?) -> Void) {
+               completion: @escaping (UIImage?) -> Void) {
     add(filter: filter)
     
     let _result = processedImageResult(with: image, filter: filter) { image, _filter in
@@ -163,7 +163,7 @@ public struct ImageProcessor: ImageProcessorType {
     }
     
     queue.cancelAllOperations()
-    queue.addOperationWithBlock {
+    queue.addOperation {
       let output = self.convertedImage(from: result.image, extent: filter.inputImage?.extent ?? .zero)
       completion(output)
     }
@@ -202,7 +202,7 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK:
   
-  private func add<T : Filter>(filter filter: T) {
+  fileprivate func add<T : Filter>(filter: T) {
     guard store.filters[filter.name] == nil else { return }
     
     do {
@@ -215,26 +215,26 @@ public struct ImageProcessor: ImageProcessorType {
     }
   }
   
-  private func preparedImage<T : Filter>(with image: UIImage, filter: T) -> CIImage? {
-    guard let _image = image.CGImage else {
+  fileprivate func preparedImage<T : Filter>(with image: UIImage, filter: T) -> CIImage? {
+    guard let _image = image.cgImage else {
       return nil
     }
     
-    let image = CIImage(CGImage: _image)
+    let image = CIImage(cgImage: _image)
     
     return image
   }
   
-  private func convertedImage(from image: CIImage, extent: CGRect) -> UIImage {
+  fileprivate func convertedImage(from image: CIImage, extent: CGRect) -> UIImage {
     let _output = self.context.createCGImage(image,
-                                             fromRect: extent)
-    let output = UIImage(CGImage: _output)
+                                             from: extent)
+    let output = UIImage(cgImage: _output!)
     
     return output
   }
   
   
-  private func setValues<T : Filter>(for filter: CIFilter, with _filter: T) {
+  fileprivate func setValues<T : Filter>(for filter: CIFilter, with _filter: T) {
     let scanned = _filter.scanned()
     for (key, value) in scanned {
       guard let value = value as? AnyObject else {

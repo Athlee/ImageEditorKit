@@ -12,13 +12,13 @@ final class FilterCell: UICollectionViewCell {
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var filterNameLabel: UILabel!
   
-  override var selected: Bool {
+  override var isSelected: Bool {
     didSet {
-      if selected {
+      if isSelected {
         filterNameLabel.textColor = UIColor(hex: 0x876DF3)
         filterNameLabel.alpha = 1
       } else {
-        filterNameLabel.textColor = UIColor.grayColor()
+        filterNameLabel.textColor = UIColor.gray
         filterNameLabel.alpha = 0.8
       }
     }

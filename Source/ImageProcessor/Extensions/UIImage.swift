@@ -13,10 +13,10 @@ typealias _CIImage = CIImage
 
 internal extension UIImage {
   var extent: CGRect {
-    guard let image = CGImage else {
+    guard let image = cgImage else {
       return .zero
     }
     
-    return _CIImage(CGImage: image).extent
+    return _CIImage(cgImage: image).extent
   }
 }

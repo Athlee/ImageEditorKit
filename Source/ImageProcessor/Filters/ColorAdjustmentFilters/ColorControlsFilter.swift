@@ -34,9 +34,9 @@ public struct ColorControlsFilter: ColorAdjustmentFilter {
        inputContrast: Float = 1.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
-    self.inputSaturation = NSNumber(float: inputSaturation)
-    self.inputBrightness = NSNumber(float: inputBrightness)
-    self.inputContrast = NSNumber(float: inputContrast)
+    self.inputSaturation = NSNumber(value: inputSaturation as Float)
+    self.inputBrightness = NSNumber(value: inputBrightness as Float)
+    self.inputContrast = NSNumber(value: inputContrast as Float)
   }
   
 }

@@ -29,7 +29,7 @@ final class ImageViewController: UIViewController, Cropable {
       return 0
     }
     
-    return !navBar.hidden ? navBar.frame.height : 0
+    return !navBar.isHidden ? navBar.frame.height : 0
   }
   
   lazy var delegate: CropableScrollViewDelegate<ImageViewController> = {
@@ -69,10 +69,10 @@ final class ImageViewController: UIViewController, Cropable {
     image = UIImage(named: "photo")!
     addImage(image)
     
-    view.userInteractionEnabled = false
+    view.isUserInteractionEnabled = false
   }
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     updateContent()
     highlightArea(false, animated: false)
@@ -80,12 +80,12 @@ final class ImageViewController: UIViewController, Cropable {
   
   // MARK: Communication 
   
-  func croppingBegan(began: Bool) {
+  func croppingBegan(_ began: Bool) {
     if began {
-      view.userInteractionEnabled = true
+      view.isUserInteractionEnabled = true
       highlightArea(true, animated: true)
     } else {
-      view.userInteractionEnabled = false
+      view.isUserInteractionEnabled = false
       highlightArea(false, animated: false)
     }
   }
@@ -101,7 +101,7 @@ final class ImageViewController: UIViewController, Cropable {
     )
     
     processor.process(image: image, filter: filter) { image in
-      NSOperationQueue.mainQueue().addOperationWithBlock {
+      OperationQueue.main.addOperation {
         guard let image = image else { return }
         self.addImage(image, adjustingContent: false)
       }

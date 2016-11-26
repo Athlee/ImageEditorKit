@@ -12,13 +12,13 @@ final class BrightnessViewController: UIViewController {
   
   @IBOutlet weak var twoSideSlider: TwoSideSlider!
   
-  var parent: ContainerViewController!
+  var _parent: ContainerViewController!
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
-  @IBAction func didUpdateValue(sender: TwoSideSlider) {
+  @IBAction func didUpdateValue(_ sender: TwoSideSlider) {
     let value = Float(sender.currentValue) * 0.001
     ContainerViewController.Children.image.brightnessValue = value
   }

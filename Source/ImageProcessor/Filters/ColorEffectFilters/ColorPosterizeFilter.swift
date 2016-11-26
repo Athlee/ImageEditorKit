@@ -29,7 +29,7 @@ public struct ColorPosterizeFilter: ColorEffectFilter {
   public init(image: UIImage, inputLevels: Float = 6.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
-    self.inputLevels = NSNumber(float: inputLevels)
+    self.inputLevels = NSNumber(value: inputLevels as Float)
   }
   
 }

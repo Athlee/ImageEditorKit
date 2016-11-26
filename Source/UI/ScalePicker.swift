@@ -18,24 +18,24 @@ public final class ScalePicker: UIControl {
   @IBInspectable public var count: Int = 57
   @IBInspectable public var scalar: Float = 1
   @IBInspectable public var offset: Int = 4
-  @IBInspectable public var tickColor: UIColor = UIColor.blueColor()
+  @IBInspectable public var tickColor: UIColor = UIColor.blue
   @IBInspectable public var distance: CGFloat = 32
   
   public  var initialValue: Float = 0
   
   public var value: Float = 0 {
     didSet {
-      sendActionsForControlEvents(.ValueChanged)
+      sendActions(for: .valueChanged)
     }
   }
   
-  private var midItem: Int {
+  fileprivate var midItem: Int {
     return Int((count - 1) / 2)
   }
   
-  private var contentCenteredIndexPath: NSIndexPath? {
-    let filtered = collectionView.indexPathsForVisibleItems().filter { path in
-      guard let cell = collectionView.cellForItemAtIndexPath(path) else {
+  fileprivate var contentCenteredIndexPath: IndexPath? {
+    let filtered = collectionView.indexPathsForVisibleItems.filter { path in
+      guard let cell = collectionView.cellForItem(at: path) else {
         return false
       }
       
@@ -45,46 +45,46 @@ public final class ScalePicker: UIControl {
     return filtered.last
   }
   
-  private var centeredIndexPath: NSIndexPath? {
-    guard let centered = contentCenteredIndexPath, cell = collectionView.cellForItemAtIndexPath(centered) else {
+  fileprivate var centeredIndexPath: IndexPath? {
+    guard let centered = contentCenteredIndexPath, let cell = collectionView.cellForItem(at: centered) else {
       return nil
     }
     
     let x = (cell.frame.midX - collectionView.contentOffset.x - collectionView.frame.width / 2)
     if x > 0 && centered.item > midItem {
-      return NSIndexPath(forItem: centered.item - 1, inSection: centered.section)
+      return IndexPath(item: centered.item - 1, section: centered.section)
     } else if x < 0 && centered.item < midItem {
-      return NSIndexPath(forItem: centered.item + 1, inSection: centered.section)
+      return IndexPath(item: centered.item + 1, section: centered.section)
     } else {
       return centered
     }
   }
   
-  private var maxX: CGFloat {
-    let indexPath = NSIndexPath(forItem: count - 1 - offset, inSection: 0)
-    if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
+  fileprivate var maxX: CGFloat {
+    let indexPath = IndexPath(item: count - 1 - offset, section: 0)
+    if let cell = collectionView.cellForItem(at: indexPath) {
       return cell.frame.midX
     } else {
       return collectionView.contentSize.width
     }
   }
   
-  private var minX: CGFloat {
-    let indexPath = NSIndexPath(forItem: offset, inSection: 0)
-    if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
+  fileprivate var minX: CGFloat {
+    let indexPath = IndexPath(item: offset, section: 0)
+    if let cell = collectionView.cellForItem(at: indexPath) {
       return cell.frame.midX
     } else {
       return 0
     }
   }
   
-  private var midX: CGFloat {
+  fileprivate var midX: CGFloat {
     return collectionView.contentSize.width / 2
   }
   
-  private lazy var collectionView: UICollectionView = {
+  fileprivate lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
-    layout.scrollDirection = .Horizontal
+    layout.scrollDirection = .horizontal
     let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
     return collectionView
   }()
@@ -95,26 +95,26 @@ public final class ScalePicker: UIControl {
     addSubview(collectionView)
     
     collectionView.translatesAutoresizingMaskIntoConstraints = false
-    collectionView.backgroundColor = .clearColor()
-    collectionView.registerClass(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
+    collectionView.backgroundColor = .clear
+    collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
     collectionView.showsHorizontalScrollIndicator = false
     
     collectionView.dataSource = self
     collectionView.delegate = self
     
     let anchors = [
-      collectionView.topAnchor.constraintEqualToAnchor(topAnchor),
-      collectionView.bottomAnchor.constraintEqualToAnchor(bottomAnchor),
-      collectionView.leadingAnchor.constraintEqualToAnchor(leadingAnchor),
-      collectionView.trailingAnchor.constraintEqualToAnchor(trailingAnchor)
+      collectionView.topAnchor.constraint(equalTo: topAnchor),
+      collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
       ].flatMap { $0 }
     
-    NSLayoutConstraint.activateConstraints(anchors)
+    NSLayoutConstraint.activate(anchors)
     
     reset()
   }
   
-  public override func drawRect(rect: CGRect) {
+  public override func draw(_ rect: CGRect) {
     let side: CGFloat = 5
     let rect = CGRect(
       origin:
@@ -125,30 +125,30 @@ public final class ScalePicker: UIControl {
       size: CGSize(width: side, height: side)
     )
     
-    let circle = UIBezierPath(ovalInRect: rect)
+    let circle = UIBezierPath(ovalIn: rect)
     tickColor.set()
     circle.fill()
   }
   
   public func reset() {
-    let indexPath = NSIndexPath(forItem: Int((count - 1) / 2), inSection: 0)
-    collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: false)
+    let indexPath = IndexPath(item: Int((count - 1) / 2), section: 0)
+    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
   }
   
 }
 
 extension ScalePicker: UICollectionViewDataSource, UICollectionViewDelegate {
   
-  public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  public func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
   
-  public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return count
   }
   
-  public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Cell.identifier, forIndexPath: indexPath) as! Cell
+  public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath) as! Cell
     
     cell.backgroundColor = tickColor
     cell.layer.cornerRadius = cell.frame.width / 2
@@ -159,27 +159,27 @@ extension ScalePicker: UICollectionViewDataSource, UICollectionViewDelegate {
 
 extension ScalePicker: UICollectionViewDelegateFlowLayout {
   
-  public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
   }
   
-  public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 3, height: collectionView.frame.width / 7)
   }
   
-  public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return distance
   }
   
-  public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return 1000
   }
   
 }
 
 internal extension UICollectionView {
-  func indexPaths(for rect: CGRect) -> [NSIndexPath] {
-    guard let allLayoutAttributes = collectionViewLayout.layoutAttributesForElementsInRect(rect) else {
+  func indexPaths(for rect: CGRect) -> [IndexPath] {
+    guard let allLayoutAttributes = collectionViewLayout.layoutAttributesForElements(in: rect) else {
       return []
     }
     
@@ -194,12 +194,12 @@ internal extension UICollectionView {
 }
 
 extension ScalePicker {
-  public func scrollViewDidScroll(scrollView: UIScrollView) {
+  public func scrollViewDidScroll(_ scrollView: UIScrollView) {
     handleScroll(scrollView)
     
     
-    if let indexPath = centeredIndexPath, cell = collectionView.cellForItemAtIndexPath(indexPath) {
-      let mid = scrollView.convertPoint(cell.center, toView: self)
+    if let indexPath = centeredIndexPath, let cell = collectionView.cellForItem(at: indexPath) {
+      let mid = scrollView.convert(cell.center, to: self)
       let _d = (bounds.midX - mid.x) / distance
       let d = _d > 0 ? _d : (1 + _d)
       
@@ -207,11 +207,11 @@ extension ScalePicker {
     }
   }
   
-  public func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+  public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
     handleScroll(scrollView)
   }
   
-  private func handleScroll(scrollView: UIScrollView) {
+  fileprivate func handleScroll(_ scrollView: UIScrollView) {
     var offset = scrollView.contentOffset
     
     if scrollView.contentOffset.x + scrollView.frame.width / 2 < minX {

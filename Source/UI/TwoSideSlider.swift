@@ -17,8 +17,8 @@ public final class TwoSideSlider: UIControl {
   @IBInspectable public var maxValue: CGFloat = 50
   
   @IBInspectable public var lineWidth: CGFloat = 1
-  @IBInspectable public var lineColor: UIColor = .blackColor()
-  @IBInspectable public var lineTintColor: UIColor = .redColor()
+  @IBInspectable public var lineColor: UIColor = .black
+  @IBInspectable public var lineTintColor: UIColor = .red
   
   @IBInspectable public var thumbImage: UIImage = UIImage() {
     didSet {
@@ -27,7 +27,7 @@ public final class TwoSideSlider: UIControl {
   }
   
   @IBInspectable public var centerThickHeight: CGFloat = 8
-  @IBInspectable public var centerThickColor: UIColor = .redColor()
+  @IBInspectable public var centerThickColor: UIColor = .red
   
   // MARK: Properties 
   
@@ -37,22 +37,22 @@ public final class TwoSideSlider: UIControl {
     didSet {
       label.text = "\(Int(currentValue))"
       adjustLabelPosition()
-      sendActionsForControlEvents(.ValueChanged)
+      sendActions(for: .valueChanged)
     }
   }
   
-  private let centerThickWidth: CGFloat = 1
+  fileprivate let centerThickWidth: CGFloat = 1
   
-  private lazy var line = CALayer()
-  private lazy var thick = CALayer()
-  private lazy var thumb = UIImageView()
-  private lazy var label = UILabel()
+  fileprivate lazy var line = CALayer()
+  fileprivate lazy var thick = CALayer()
+  fileprivate lazy var thumb = UIImageView()
+  fileprivate lazy var label = UILabel()
   
-  private lazy var leftLine = UIView()
-  private lazy var rightLine = UIView()
+  fileprivate lazy var leftLine = UIView()
+  fileprivate lazy var rightLine = UIView()
   
-  private var moving = false
-  private var previousPoint: CGPoint = .zero
+  fileprivate var moving = false
+  fileprivate var previousPoint: CGPoint = .zero
   
   // MARK: Life cycle
   
@@ -60,17 +60,17 @@ public final class TwoSideSlider: UIControl {
     super.layoutSubviews()
   }
   
-  public override func drawRect(rect: CGRect) {
+  public override func draw(_ rect: CGRect) {
     guard !moving else {
       return
     }
     
-    backgroundColor = .clearColor()
+    backgroundColor = .clear
     
     layer.addSublayer(line)
     line.frame.origin = CGPoint(x: bounds.minX, y: bounds.midY - lineWidth / 2)
     line.frame.size = CGSize(width: bounds.width, height: lineWidth)
-    line.backgroundColor = lineColor.CGColor
+    line.backgroundColor = lineColor.cgColor
     line.cornerRadius = lineWidth / 2
     
     addSubview(leftLine)
@@ -88,7 +88,7 @@ public final class TwoSideSlider: UIControl {
     layer.addSublayer(thick)
     thick.position = CGPoint(x: bounds.midX - centerThickWidth / 2, y: bounds.midY - centerThickHeight / 2)
     thick.frame.size = CGSize(width: centerThickWidth, height: centerThickHeight)
-    thick.backgroundColor = centerThickColor.CGColor
+    thick.backgroundColor = centerThickColor.cgColor
     thick.cornerRadius = centerThickWidth / 2
     
     addSubview(thumb)
@@ -98,8 +98,8 @@ public final class TwoSideSlider: UIControl {
     
     addSubview(label)
     label.textColor = lineTintColor
-    label.textAlignment = .Center
-    label.font = UIFont.systemFontOfSize(13)
+    label.textAlignment = .center
+    label.font = UIFont.systemFont(ofSize: 13)
     label.text = "\(Int(midValue))"
     adjustLabelPosition()
   }
@@ -121,37 +121,37 @@ public final class TwoSideSlider: UIControl {
   
   // MARK: IBActions
   
-  @IBAction internal func didRecognizePanGesture(recognizer: UIPanGestureRecognizer) {
-    let point = recognizer.locationInView(self)
+  @IBAction internal func didRecognizePanGesture(_ recognizer: UIPanGestureRecognizer) {
+    let point = recognizer.location(in: self)
     moving = true
     
-    guard recognizer.state != .Began else {
+    guard recognizer.state != .began else {
       previousPoint = point
       return
     }
     
     let delta = point.x - previousPoint.x
     previousPoint = point
-    moveThumb(dx: delta)
+    moveThumb(delta)
     
-    if recognizer.state == .Ended {
+    if recognizer.state == .ended {
       moving = false
       let distance = thumb.center.x - bounds.midX
       if abs(distance) <= 30 {
         currentValue = midValue
         resetLines()
-        UIView.animateWithDuration(0.2) {
+        UIView.animate(withDuration: 0.2, animations: {
           let bounds = self.bounds
           self.thumb.center = CGPoint(x: bounds.midX, y: bounds.midY)
           self.adjustLabelPosition()
-        }
+        }) 
       }
     }
   }
   
   // MARK: UI movement
   
-  private func moveThumb(dx dx: CGFloat) {
+  fileprivate func moveThumb(_ dx: CGFloat) {
     var dx = dx
     
     if dx < 0 && thumb.frame.minX + dx < 0 {
@@ -162,10 +162,10 @@ public final class TwoSideSlider: UIControl {
     
     thumb.frame.origin.x += dx
     adjustLabelPosition()
-    moveThickLine(dx: dx)
+    moveThickLine(dx)
   }
   
-  private func adjustLabelPosition() {
+  fileprivate func adjustLabelPosition() {
     label.sizeToFit()
     label.center = CGPoint(x: thumb.center.x, y: thumb.frame.minY - label.frame.height)
     if currentValue == midValue {
@@ -175,9 +175,9 @@ public final class TwoSideSlider: UIControl {
     }
   }
   
-  private func moveThickLine(dx dx: CGFloat) {
-    moveLeftLine(dx: dx)
-    moveRightLine(dx: dx)
+  fileprivate func moveThickLine(_ dx: CGFloat) {
+    moveLeftLine(dx)
+    moveRightLine(dx)
     
     if thumb.center.x > bounds.midX {
       let x = thumb.center.x > bounds.midX * 1.5 ? // left or right side of right line
@@ -194,7 +194,7 @@ public final class TwoSideSlider: UIControl {
     }
   }
   
-  private func moveLeftLine(dx dx: CGFloat) {
+  fileprivate func moveLeftLine(_ dx: CGFloat) {
     var dx = dx
     if dx < 0 {
       guard thumb.center.x < bounds.midX else {
@@ -228,7 +228,7 @@ public final class TwoSideSlider: UIControl {
     }
   }
   
-  private func moveRightLine(dx dx: CGFloat) {
+  fileprivate func moveRightLine(_ dx: CGFloat) {
     var dx = dx
     if dx < 0 {
       if rightLine.frame.width > 0 {

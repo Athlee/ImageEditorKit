@@ -9,10 +9,10 @@
 import Foundation
 
 public struct FilterErrorPrinter {
-  public static func printError(error: FilterError) {
+  public static func printError(_ error: FilterError) {
     let message: String
     switch error {
-    case .FilterDoesNotExist(let name):
+    case .filterDoesNotExist(let name):
       message = "Unable to find filter in CoreFilter library named: \(name)."
     }
     

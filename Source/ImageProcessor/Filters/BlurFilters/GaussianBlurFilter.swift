@@ -36,7 +36,7 @@ public struct GaussianBlurFilter: BlurFilter {
   public init(image: UIImage, inputRadius: Float) {
     self.image = image
     self.inputImage = CIImage(image: image)
-    self.inputRadius = NSNumber(float: inputRadius)
+    self.inputRadius = NSNumber(value: inputRadius as Float)
   }
 }
 

@@ -8,8 +8,8 @@
 
 import CoreImage
 
-public enum FilterError: ErrorType {
-  case FilterDoesNotExist(String)
+public enum FilterError: Error {
+  case filterDoesNotExist(String)
 }
 
 public protocol Filter: Scanable, Equatable, Hashable {
@@ -33,7 +33,7 @@ public extension Filter {
     if let filter = CIFilter(name: name) {
       return filter
     } else {
-      throw FilterError.FilterDoesNotExist(name)
+      throw FilterError.filterDoesNotExist(name)
     }
   }
 }

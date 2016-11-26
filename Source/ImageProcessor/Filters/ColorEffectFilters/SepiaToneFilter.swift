@@ -29,7 +29,7 @@ public struct SepiaToneFilter: ColorEffectFilter {
   public init(image: UIImage, intensity: Float = 1.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
-    self.inputIntensity = NSNumber(float: intensity)
+    self.inputIntensity = NSNumber(value: intensity as Float)
   }
   
 }

@@ -12,31 +12,31 @@ final class FilterViewController: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
   
-  var parent: ContainerViewController!
+  var _parent: ContainerViewController!
   
   let processor = ImageProcessor()
   let image = UIImage(named: "photo")!
   let scale: CGFloat = 3
-  let queue = NSOperationQueue()
+  let queue = OperationQueue()
   
-  var images: [NSIndexPath: UIImage] = [:]
-  var names: [NSIndexPath: String] = [:]
+  var images: [IndexPath: UIImage] = [:]
+  var names: [IndexPath: String] = [:]
   
   override func viewDidLoad() {
     super.viewDidLoad()
     prepareImages()
   }
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    let indexPath = NSIndexPath(forItem: 0, inSection: 0)
-    collectionView.selectItemAtIndexPath(indexPath, animated: false, scrollPosition: .Top)
+    let indexPath = IndexPath(item: 0, section: 0)
+    collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
   }
   
   func prepareImages() {
     for i in 0..<13 {
-      let indexPath = NSIndexPath(forItem: i, inSection: 0)
+      let indexPath = IndexPath(item: i, section: 0)
       if images[indexPath] == nil {
         let completion: (UIImage?) -> Void = { [indexPath] image in
           self.images[indexPath] = image
@@ -51,25 +51,25 @@ final class FilterViewController: UIViewController {
 }
 
 extension FilterViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-  func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
   
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 14
   }
   
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FilterCell", forIndexPath: indexPath) as! FilterCell
-    cell.imageView.opaque = true
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCell", for: indexPath) as! FilterCell
+    cell.imageView.isOpaque = true
     cell.layer.shouldRasterize = true
-    cell.layer.rasterizationScale = UIScreen.mainScreen().scale
+    cell.layer.rasterizationScale = UIScreen.main.scale
     
     if let image = images[indexPath] {
       cell.imageView.image = image
     } else {
       let completion: (UIImage?) -> Void = { [cell, indexPath] image in
-        NSOperationQueue.mainQueue().addOperationWithBlock {
+        OperationQueue.main.addOperation {
           self.images[indexPath] = image
           cell.imageView.image = image
         }
@@ -83,18 +83,18 @@ extension FilterViewController: UICollectionViewDataSource, UICollectionViewDele
     return cell
   }
   
-  func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
-    if let cell = cell as? FilterCell, image = images[indexPath] {
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    if let cell = cell as? FilterCell, let image = images[indexPath] {
       cell.imageView.image = image
       cell.filterNameLabel.text = names[indexPath]
     }
   }
   
-  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     if let image = images[indexPath] {
       ContainerViewController.Children.image.image = image
       
-      guard let cell = collectionView.cellForItemAtIndexPath(indexPath) else {
+      guard let cell = collectionView.cellForItem(at: indexPath) else {
         return
       }
       
@@ -102,7 +102,7 @@ extension FilterViewController: UICollectionViewDataSource, UICollectionViewDele
     }
   }
   
-  func prepareImage(at indexPath: NSIndexPath, completion: (UIImage?) -> Void) {
+  func prepareImage(at indexPath: IndexPath, completion: (UIImage?) -> Void) {
     switch indexPath.item {
     case 0:
       names[indexPath] = "None"
@@ -114,7 +114,7 @@ extension FilterViewController: UICollectionViewDataSource, UICollectionViewDele
       processor.process(image: self.image, filter: filter, completion: completion)
       
     case 2:
-      let filter = ColorMonochromeFilter(image: image, color: .orangeColor())
+      let filter = ColorMonochromeFilter(image: image, color: .orange)
       names[indexPath] = "Monochrome"
       processor.process(image: self.image, filter: filter, completion: completion)
       
@@ -124,7 +124,7 @@ extension FilterViewController: UICollectionViewDataSource, UICollectionViewDele
       processor.process(image: self.image, filter: filter, completion: completion)
       
     case 4:
-      let filter = FalseColorFilter(image: image, inputColor0: .redColor(), inputColor1: .blueColor())
+      let filter = FalseColorFilter(image: image, inputColor0: .red, inputColor1: .blue)
       names[indexPath] = "False Color"
       processor.process(image: self.image, filter: filter, completion: completion)
       
@@ -181,19 +181,19 @@ extension FilterViewController: UICollectionViewDataSource, UICollectionViewDele
 
 extension FilterViewController: UICollectionViewDelegateFlowLayout {
   
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
   }
   
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: collectionView.frame.width / 4, height: collectionView.frame.width / 2.5)
   }
   
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 8
   }
   
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return 8
   }
   

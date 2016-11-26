@@ -53,7 +53,10 @@ public protocol Cropable {
   ///
   /// Centers a content view in its superview depending on the size.
   ///
-  func centerContent()
+  /// - parameter forcing: Determines whether centering should be done forcing. 
+  /// This, generally, means that the content will be forced to get centered.
+  ///
+  func centerContent(forcing: Bool)
   
   ///
   /// This method is called whenever the zooming
@@ -92,7 +95,7 @@ public protocol Cropable {
   /// - parameter highlght: A flag indicating whether it should show or hide the zone.
   /// - parameter animated: An animation flag, it's `true` by default.
   ///
-  func highlightArea(highlight: Bool, animated: Bool)
+  func highlightArea(_ highlight: Bool, animated: Bool)
 }
 
 // MARK: - Default implementations for UIImageView childs
@@ -109,15 +112,15 @@ public extension Cropable where ChildView == UIImageView {
     view.addSubview(cropView)
     
     let anchors = [
-      cropView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-      cropView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
-      cropView.topAnchor.constraintEqualToAnchor(view.topAnchor),
-      cropView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor)
+      cropView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      cropView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      cropView.topAnchor.constraint(equalTo: view.topAnchor),
+      cropView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ].flatMap { $0 }
     
-    NSLayoutConstraint.activateConstraints(anchors)
+    NSLayoutConstraint.activate(anchors)
     
-    cropView.backgroundColor = .clearColor()
+    cropView.backgroundColor = .clear
     cropView.showsHorizontalScrollIndicator = false
     cropView.showsVerticalScrollIndicator = false
     cropView.contentSize = view.bounds.size
@@ -143,12 +146,13 @@ public extension Cropable where ChildView == UIImageView {
   /// - parameter image: An image to use.
   /// - parameter adjustingContent: Indicates whether the content should be adjusted or not. Default value is `true`.
   ///
-  func addImage(image: UIImage, adjustingContent: Bool = true) {
+  func addImage(_ image: UIImage, adjustingContent: Bool = true) {
     childView.image = image
     
     if adjustingContent {
       childView.sizeToFit()
       childView.frame.origin = .zero
+      cropView.contentOffset = .zero
       cropView.contentSize = childView.image!.size
       
       updateContent()
@@ -178,24 +182,26 @@ public extension Cropable {
   }
   
   ///
-  /// Updated the current cropable content area, zoom and scale.
+  /// Updates the current cropable content area, zoom and scale.
   ///
   func updateContent() {
     let childViewSize = childView.bounds.size
-    let scrollViewSize = cropView.superview!.frame
+    let scrollViewSize = cropView.bounds.size
     let widthScale = scrollViewSize.width / childViewSize.width
     let heightScale = scrollViewSize.height / childViewSize.height
-    let scale = min(heightScale, widthScale)
+    
+    let minScale = max(scrollViewSize.width, scrollViewSize.height) / max(childViewSize.width, childViewSize.height)
+    let maxScale = max(heightScale, widthScale)
     
     if let _self = self as? UIScrollViewDelegate {
       cropView.delegate = _self
     }
     
-    cropView.minimumZoomScale = scale
+    cropView.minimumZoomScale = minScale
     cropView.maximumZoomScale = 4
-    cropView.zoomScale = scale
+    cropView.zoomScale = maxScale
     
-    centerContent()
+    centerContent(forcing: true)
     
     highlightArea(alwaysShowGuidelines, animated: false)
   }
@@ -203,26 +209,25 @@ public extension Cropable {
   ///
   /// Centers a content view in its superview depending on the size.
   ///
-  func centerContent() {
-    let boundsSize = cropView.bounds.size
-    let contentFrame = childView.frame
-    var origin = contentFrame.origin
+  /// - parameter forcing: Determines whether centering should be done forcing.
+  /// This, generally, means that the content will be forced to get centered.
+  ///
+  func centerContent(forcing: Bool = false) {
+    var (left, top): (CGFloat, CGFloat) = (0, 0)
     
-    if contentFrame.size.width < boundsSize.width {
-      origin.x = (boundsSize.width - contentFrame.width) / 2
-    } else {
-      origin.x = 0
+    if cropView.contentSize.width < cropView.bounds.width {
+      left = (cropView.bounds.width - cropView.contentSize.width) / 2
+    } else if forcing {
+      cropView.contentOffset.x = abs(cropView.bounds.width - cropView.contentSize.width) / 2
     }
     
-    if contentFrame.size.height < boundsSize.height {
-      origin.y = (boundsSize.height - contentFrame.height) / 2
-    } else {
-      origin.y = 0
+    if cropView.contentSize.height < cropView.bounds.height {
+      top = (cropView.bounds.height - cropView.contentSize.height) / 2
+    } else if forcing {
+      cropView.contentOffset.y = abs(cropView.bounds.height - cropView.contentSize.height) / 2
     }
     
-    origin.y -= topOffset
-    cropView.contentInset.bottom = -topOffset
-    childView.frame.origin = origin
+    cropView.contentInset = UIEdgeInsets(top: top, left: left, bottom: top, right: left)
   }
   
   ///
@@ -268,22 +273,22 @@ public extension Cropable {
   /// - parameter highlght: A flag indicating whether it should show or hide the zone.
   /// - parameter animated: An animation flag, it's `true` by default.
   ///
-  func highlightArea(highlight: Bool, animated: Bool = true) {
-    guard UIApplication.sharedApplication().keyWindow != nil else {
+  func highlightArea(_ highlight: Bool, animated: Bool = true) {
+    guard UIApplication.shared.keyWindow != nil else {
       return
     }
     
     linesView.setNeedsDisplay()
     if linesView.superview == nil {
       cropView.insertSubview(linesView, aboveSubview: childView)
-      linesView.backgroundColor = UIColor.clearColor()
+      linesView.backgroundColor = UIColor.clear
       linesView.alpha = 0
     } else {
       if animated {
-        UIView.animateWithDuration(
-          0.3,
+        UIView.animate(
+          withDuration: 0.3,
           delay: 0,
-          options: [.AllowUserInteraction],
+          options: [.allowUserInteraction],
           animations: {
             self.linesView.alpha = highlight ? 1 : 0
           },
@@ -302,8 +307,7 @@ public extension Cropable {
     )
     
     let visibleRect = CGRect(origin: cropView.contentOffset, size: cropView.bounds.size)
-    let intersection = visibleRect.intersect(childView.frame)
+    let intersection = visibleRect.intersection(childView.frame)
     linesView.frame = intersection
   }
 }
-

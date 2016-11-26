@@ -30,8 +30,8 @@ public struct VignetteFilter: ColorEffectFilter {
   public init(image: UIImage, inputRadius: Float = 1.0, intensity: Float = 0.0) {
     self.image = image
     self.inputImage = CIImage(image: image)
-    self.inputRadius = NSNumber(float: inputRadius)
-    self.inputIntensity = NSNumber(float: intensity)
+    self.inputRadius = NSNumber(value: inputRadius as Float)
+    self.inputIntensity = NSNumber(value: intensity as Float)
   }
   
 }

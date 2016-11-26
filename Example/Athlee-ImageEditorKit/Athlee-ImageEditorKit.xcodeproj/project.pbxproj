@@ -46,7 +46,6 @@
 		046417921D3D50F300C9AE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046417901D3D50F300C9AE3F /* Main.storyboard */; };
 		046417941D3D50F300C9AE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046417931D3D50F300C9AE3F /* Assets.xcassets */; };
 		046417971D3D50F300C9AE3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046417951D3D50F300C9AE3F /* LaunchScreen.storyboard */; };
-		046417A21D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417A11D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift */; };
 		046417AF1D3D53D500C9AE3F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417AE1D3D53D500C9AE3F /* ImageViewController.swift */; };
 		046417B11D3D53EB00C9AE3F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417B01D3D53EB00C9AE3F /* ContainerViewController.swift */; };
 		046417B31D3D540200C9AE3F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046417B21D3D540200C9AE3F /* FilterViewController.swift */; };
@@ -110,7 +109,6 @@
 		046417961D3D50F300C9AE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046417981D3D50F300C9AE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0464179D1D3D50F400C9AE3F /* Athlee-ImageEditorKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Athlee-ImageEditorKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		046417A11D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlee_ImageEditorKitTests.swift; sourceTree = "<group>"; };
 		046417A31D3D50F400C9AE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046417AE1D3D53D500C9AE3F /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		046417B01D3D53EB00C9AE3F /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 		046417A01D3D50F400C9AE3F /* Athlee-ImageEditorKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				046417A11D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift */,
 				046417A31D3D50F400C9AE3F /* Info.plist */,
 			);
 			path = "Athlee-ImageEditorKitTests";
@@ -433,9 +430,12 @@
 				TargetAttributes = {
 					046417881D3D50F300C9AE3F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RG4N372RZE;
+						LastSwiftMigration = 0810;
 					};
 					0464179C1D3D50F400C9AE3F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 046417881D3D50F300C9AE3F;
 					};
 				};
@@ -507,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9703A31870DB4752FA3EBC66 /* [CP] Copy Pods Resources */ = {
@@ -582,7 +582,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046417A21D3D50F400C9AE3F /* Athlee_ImageEditorKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,10 +703,12 @@
 			baseConfigurationReference = F6D6F5EEAA6737C7520DFF3B /* Pods-Athlee-ImageEditorKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RG4N372RZE;
 				INFOPLIST_FILE = "Athlee-ImageEditorKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -717,10 +718,12 @@
 			baseConfigurationReference = 23388D0110DDFB6BDDAA317F /* Pods-Athlee-ImageEditorKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RG4N372RZE;
 				INFOPLIST_FILE = "Athlee-ImageEditorKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -733,6 +736,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athlee-ImageEditorKit.app/Athlee-ImageEditorKit";
 			};
 			name = Debug;
@@ -745,6 +749,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athlee-ImageEditorKit.app/Athlee-ImageEditorKit";
 			};
 			name = Release;
