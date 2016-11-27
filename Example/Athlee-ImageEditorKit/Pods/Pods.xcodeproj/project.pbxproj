@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C5A665E5B22AE74498311D7ED157A2 /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4D5C156CBC744AD897100B69CBEC3 /* LinesView.swift */; };
-		0452DAD11DEB72B6009EFE32 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452DAD01DEB72B6009EFE32 /* CGAffineTransform.swift */; };
-		0452DAD31DEB7356009EFE32 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452DAD21DEB7356009EFE32 /* Radians.swift */; };
-		04883853943FEA070E919BC5566089AB /* CropableScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23C1FB5EA4155D4B626E5EE82125D6 /* CropableScrollViewDelegate.swift */; };
-		0A4C3AC902DEF0BA8AE6FCFE5F3F525B /* FloatingViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E9D3BACEB84BF3ADA25A42CD40C026 /* FloatingViewLayout.swift */; };
 		1013DC8B91E9905B54A7EB90126FE7CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		103F9037380D06F925E0CD38E15E8BC7 /* PhotoFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1B101E183BCC4312A953F45789034 /* PhotoFetchable.swift */; };
+		13C94C585333738F061542E2DCB53DB2 /* PhotoCapturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4028B40DAFC046C8004B486461FFF6C /* PhotoCapturable.swift */; };
+		1629FA1CAA8B52E0DFF40F1F169A6704 /* NSIndexSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F24EA7BE4806D90CEA5F54AA8CEA8 /* NSIndexSet.swift */; };
 		195CD79583AC88DA47DAE7BF2C1545C4 /* Pods-Athlee-ImageEditorKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE656B4F5FA00FB06B5F2AB126C9F2 /* Pods-Athlee-ImageEditorKit-dummy.m */; };
-		1D576296F35BC1395BC09BF74D2293CE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D11E46740CD30521408716BCA4078 /* UIView.swift */; };
-		2E03F06DC6E9C1C736FF00DA377D322A /* Capturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC30FB49ED8E130CF5D4ADCF6368BC /* Capturable.swift */; };
-		46FA26FDD71AF75371D934822A588BFF /* PhotoCapturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CB89EF23E90BE71C0963C81A5B128 /* PhotoCapturable.swift */; };
-		4C659A14A9954749BA85E730DD934A03 /* ImagePickerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3663AD05A3E5643FA228E23F820182C5 /* ImagePickerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B73443587A29D6C934CF1D339FA4790 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F21CA7BFF3599EC249D5FA0C5C7F3 /* CGAffineTransform.swift */; };
+		1E84194C02580EB54493924DD0690625 /* ImagePickerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FFAB35504487713842DD8E46245FDE /* ImagePickerKit-dummy.m */; };
+		1F31EEB723678B16700F0BC5CD001B35 /* FloatingViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E871B7BEDFD28FF29D28CB5CED0B198 /* FloatingViewLayout.swift */; };
+		3BBAF4D29EAAE1554A52BFD3430F8A5F /* Capturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22931B71BA74005A20882988A9F258 /* Capturable.swift */; };
+		3C0E2564A2042A0F92DD035FE0DF0E7B /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB529679FAD90B64E372A697EBDA17 /* CGRect.swift */; };
+		53AECBC9A2D4C0AADE3FE081B70C992C /* ImagePickerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 495F53DA3404E32A9E9B0110F389FB20 /* ImagePickerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65FA28E95A86A6FEAE165D509B47C219 /* Pods-Athlee-ImageEditorKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C66E17DE2FF7A9F02F89A3ABD1B6A169 /* Pods-Athlee-ImageEditorKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		822F7EA03D1DB33D7C72A7211DF2DA74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		82ED2FAFF08E69091D799B55710493B5 /* CollectionViewChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5485E398EEC39162325B995A290BA /* CollectionViewChangeObserver.swift */; };
-		8F6A8A59B27B7FE193B64023A924582A /* NSIndexSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170C4A28E63EBE15EACEC6EE3EB3F1D /* NSIndexSet.swift */; };
-		989C6014287F5C7E27E2CC8A8F9A1B3D /* CaptureNotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1FB3051A4CF4FCC647EFC56C5839B3 /* CaptureNotificationObserver.swift */; };
-		B99ED3C1196780821EA5139B26161B9F /* Cropable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91453857774FE0227D7C5CC7B2CB7721 /* Cropable.swift */; };
-		D0A54CED008DC87AEF7082508D0388BC /* PhotoCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE104E4C6FEC84F691A3841F02B3089 /* PhotoCachable.swift */; };
-		D5305606F8C817216EF562E8D2DB0AFA /* ImagePickerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2095FDC766FC488D0DA03BC9D54AED5 /* ImagePickerKit-dummy.m */; };
-		D841BD355186A853E60148FEEBAE1AEF /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ABA58CE525FD3FD35ABC410C3A76F8 /* UICollectionView.swift */; };
-		DFCB127C63F3150D69CE11DF91899DD7 /* PhotoFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716D4064FF68F65EAA4B187D48E75CD /* PhotoFetchable.swift */; };
-		F2FE3D0B39AA87A3AC16D4DC71596EC8 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BA2D4BF05D693DD998E68EBABB942 /* CGRect.swift */; };
+		669D8511202C46D1EE0A7E125A3B6510 /* PhotoCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666FBB007AE25CE99F8983E01246044 /* PhotoCachable.swift */; };
+		7CA4EA95E94EDE842082CC2319C27B45 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1089D1D9E9F70A7085EF9536CEE39F65 /* UICollectionView.swift */; };
+		8B3AED06EA35D8DBA7FAC60B8285DE85 /* CaptureNotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73742F060FBD40FDAE1EB70428812CC4 /* CaptureNotificationObserver.swift */; };
+		97E25D7A8255741C36104E8E0BC0F651 /* CropableScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0317EB058992E7E3011B35D79DADF /* CropableScrollViewDelegate.swift */; };
+		C6D9B7E124B175CB6BCF907C0305FDD6 /* CollectionViewChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B6E22F936050EBFAEC0A99E654ED3 /* CollectionViewChangeObserver.swift */; };
+		CA67B3FA441888586F6307AADB89C78A /* Cropable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077D61BF556F7F6662903A05E54DFF9 /* Cropable.swift */; };
+		D273B13456A976E1C4C24CBDBFDDA098 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3BF1297BD5CE1A7FDB17F9CDAE5626 /* Radians.swift */; };
+		E36962126EF77E8809FE040C2840D485 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4768DBD04B023C0148677E374C5A857 /* UIView.swift */; };
+		EB1E3F9FD0C43BF5007BDC93F55388C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		F70378808A5187325E7C70F3AD2C26FB /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E49111CA7934FEBB0A0331426AF16 /* LinesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,56 +36,56 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B5BD900E5E5A8EE01337DF51009F9188;
+			remoteGlobalIDString = 4B98CFC8BCE3D65075578F2C3B7EE922;
 			remoteInfo = ImagePickerKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0452DAD01DEB72B6009EFE32 /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
-		0452DAD21DEB7356009EFE32 /* Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
+		0D3BF1297BD5CE1A7FDB17F9CDAE5626 /* Radians.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Radians.swift; path = Source/Radians.swift; sourceTree = "<group>"; };
+		1089D1D9E9F70A7085EF9536CEE39F65 /* UICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionView.swift; path = Source/UICollectionView.swift; sourceTree = "<group>"; };
 		10DE656B4F5FA00FB06B5F2AB126C9F2 /* Pods-Athlee-ImageEditorKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Athlee-ImageEditorKit-dummy.m"; sourceTree = "<group>"; };
-		17711FE48C59F76B57A7447BCB2C9951 /* ImagePickerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ImagePickerKit.modulemap; sourceTree = "<group>"; };
-		2D2379C21635F0E68BC838BEC5CB153A /* ImagePickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagePickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6E49111CA7934FEBB0A0331426AF16 /* LinesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinesView.swift; path = Source/LinesView.swift; sourceTree = "<group>"; };
+		2D2379C21635F0E68BC838BEC5CB153A /* ImagePickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ImagePickerKit.framework; path = ImagePickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3077D61BF556F7F6662903A05E54DFF9 /* Cropable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cropable.swift; path = Source/Cropable.swift; sourceTree = "<group>"; };
 		320950A60FF8E882E7F69E1422DE30AF /* Pods-Athlee-ImageEditorKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Athlee-ImageEditorKit-resources.sh"; sourceTree = "<group>"; };
-		3663AD05A3E5643FA228E23F820182C5 /* ImagePickerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePickerKit-umbrella.h"; sourceTree = "<group>"; };
-		4021BBC07A14B3EA08D62FFF85A22B3D /* ImagePickerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePickerKit-prefix.pch"; sourceTree = "<group>"; };
-		5D1FB3051A4CF4FCC647EFC56C5839B3 /* CaptureNotificationObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaptureNotificationObserver.swift; path = Source/CaptureNotificationObserver.swift; sourceTree = "<group>"; };
+		369B6E22F936050EBFAEC0A99E654ED3 /* CollectionViewChangeObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewChangeObserver.swift; path = Source/CollectionViewChangeObserver.swift; sourceTree = "<group>"; };
+		381C8C507AE575CB689F724E4D4B4572 /* ImagePickerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePickerKit-prefix.pch"; sourceTree = "<group>"; };
+		3DDB529679FAD90B64E372A697EBDA17 /* CGRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Source/CGRect.swift; sourceTree = "<group>"; };
+		495F53DA3404E32A9E9B0110F389FB20 /* ImagePickerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePickerKit-umbrella.h"; sourceTree = "<group>"; };
+		538F21CA7BFF3599EC249D5FA0C5C7F3 /* CGAffineTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGAffineTransform.swift; path = Source/CGAffineTransform.swift; sourceTree = "<group>"; };
+		5E871B7BEDFD28FF29D28CB5CED0B198 /* FloatingViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingViewLayout.swift; path = Source/FloatingViewLayout.swift; sourceTree = "<group>"; };
 		6A1F20B484E5110DD6D13C46B4160157 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7026F7AA6BEFED10C473777BC0D5490F /* Pods-Athlee-ImageEditorKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Athlee-ImageEditorKit-frameworks.sh"; sourceTree = "<group>"; };
-		790BA2D4BF05D693DD998E68EBABB942 /* CGRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Source/CGRect.swift; sourceTree = "<group>"; };
-		7F23C1FB5EA4155D4B626E5EE82125D6 /* CropableScrollViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropableScrollViewDelegate.swift; path = Source/CropableScrollViewDelegate.swift; sourceTree = "<group>"; };
+		72A0317EB058992E7E3011B35D79DADF /* CropableScrollViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropableScrollViewDelegate.swift; path = Source/CropableScrollViewDelegate.swift; sourceTree = "<group>"; };
+		73742F060FBD40FDAE1EB70428812CC4 /* CaptureNotificationObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaptureNotificationObserver.swift; path = Source/CaptureNotificationObserver.swift; sourceTree = "<group>"; };
+		8065F4298A8213ED6938D79776B38A49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8207B65EF79AB0A0392C0AEBA2192B27 /* Pods-Athlee-ImageEditorKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Athlee-ImageEditorKit-acknowledgements.plist"; sourceTree = "<group>"; };
-		8716D4064FF68F65EAA4B187D48E75CD /* PhotoFetchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoFetchable.swift; path = Source/PhotoFetchable.swift; sourceTree = "<group>"; };
-		91453857774FE0227D7C5CC7B2CB7721 /* Cropable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cropable.swift; path = Source/Cropable.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F1C8F4B4CC1D3DA307A0E71AE0B844D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2095FDC766FC488D0DA03BC9D54AED5 /* ImagePickerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImagePickerKit-dummy.m"; sourceTree = "<group>"; };
+		8666FBB007AE25CE99F8983E01246044 /* PhotoCachable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoCachable.swift; path = Source/PhotoCachable.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F1F24EA7BE4806D90CEA5F54AA8CEA8 /* NSIndexSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSIndexSet.swift; path = Source/NSIndexSet.swift; sourceTree = "<group>"; };
 		A5E8D627266ECF76F783C3F9315D2C65 /* Pods-Athlee-ImageEditorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Athlee-ImageEditorKit.release.xcconfig"; sourceTree = "<group>"; };
-		A618944C5E77FA70B009C46D073971D5 /* Pods_Athlee_ImageEditorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athlee_ImageEditorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A618944C5E77FA70B009C46D073971D5 /* Pods_Athlee_ImageEditorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Athlee_ImageEditorKit.framework; path = "Pods-Athlee-ImageEditorKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A689FE9874950A8A4A642BC8507257BA /* Pods-Athlee-ImageEditorKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Athlee-ImageEditorKit-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AAA43A466CB97E1D3D9ECCD5246CCF85 /* ImagePickerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImagePickerKit.xcconfig; sourceTree = "<group>"; };
-		AEE104E4C6FEC84F691A3841F02B3089 /* PhotoCachable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoCachable.swift; path = Source/PhotoCachable.swift; sourceTree = "<group>"; };
-		B0ABA58CE525FD3FD35ABC410C3A76F8 /* UICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionView.swift; path = Source/UICollectionView.swift; sourceTree = "<group>"; };
-		B89D11E46740CD30521408716BCA4078 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = "<group>"; };
-		BB6D4C623FE2CBEF4D44694A3087B350 /* Pods-Athlee-ImageEditorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Athlee-ImageEditorKit.modulemap"; sourceTree = "<group>"; };
-		C2DC30FB49ED8E130CF5D4ADCF6368BC /* Capturable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Capturable.swift; path = Source/Capturable.swift; sourceTree = "<group>"; };
+		BA22931B71BA74005A20882988A9F258 /* Capturable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Capturable.swift; path = Source/Capturable.swift; sourceTree = "<group>"; };
+		BB6D4C623FE2CBEF4D44694A3087B350 /* Pods-Athlee-ImageEditorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Athlee-ImageEditorKit.modulemap"; sourceTree = "<group>"; };
+		C4028B40DAFC046C8004B486461FFF6C /* PhotoCapturable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoCapturable.swift; path = Source/PhotoCapturable.swift; sourceTree = "<group>"; };
 		C66E17DE2FF7A9F02F89A3ABD1B6A169 /* Pods-Athlee-ImageEditorKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Athlee-ImageEditorKit-umbrella.h"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D170C4A28E63EBE15EACEC6EE3EB3F1D /* NSIndexSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSIndexSet.swift; path = Source/NSIndexSet.swift; sourceTree = "<group>"; };
-		D96CB89EF23E90BE71C0963C81A5B128 /* PhotoCapturable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoCapturable.swift; path = Source/PhotoCapturable.swift; sourceTree = "<group>"; };
+		E0AA95EB144FBB325651868126DEC55C /* ImagePickerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImagePickerKit.xcconfig; sourceTree = "<group>"; };
 		E3CE561E746C6930DA50FF5951C14C8A /* Pods-Athlee-ImageEditorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Athlee-ImageEditorKit.debug.xcconfig"; sourceTree = "<group>"; };
-		E6C4D5C156CBC744AD897100B69CBEC3 /* LinesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinesView.swift; path = Source/LinesView.swift; sourceTree = "<group>"; };
-		F0E9D3BACEB84BF3ADA25A42CD40C026 /* FloatingViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingViewLayout.swift; path = Source/FloatingViewLayout.swift; sourceTree = "<group>"; };
-		F6D5485E398EEC39162325B995A290BA /* CollectionViewChangeObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewChangeObserver.swift; path = Source/CollectionViewChangeObserver.swift; sourceTree = "<group>"; };
+		F4768DBD04B023C0148677E374C5A857 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = "<group>"; };
+		F5FFAB35504487713842DD8E46245FDE /* ImagePickerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImagePickerKit-dummy.m"; sourceTree = "<group>"; };
+		FC21B969A6D69F4B94093CB23F46EFED /* ImagePickerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ImagePickerKit.modulemap; sourceTree = "<group>"; };
+		FFF1B101E183BCC4312A953F45789034 /* PhotoFetchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoFetchable.swift; path = Source/PhotoFetchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		140BD7DC13E3D78276B5C1E6FB0CDBF3 /* Frameworks */ = {
+		7DEC7D57AC33246768B92BD9B0DDB680 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822F7EA03D1DB33D7C72A7211DF2DA74 /* Foundation.framework in Frameworks */,
+				EB1E3F9FD0C43BF5007BDC93F55388C5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,28 +100,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CB08E9BC8B5AA9D9C0498A074EE6B7C /* ImagePickerKit */ = {
+		2C31BD4AB49A81ED114394015A2B21A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0452DAD21DEB7356009EFE32 /* Radians.swift */,
-				0452DAD01DEB72B6009EFE32 /* CGAffineTransform.swift */,
-				C2DC30FB49ED8E130CF5D4ADCF6368BC /* Capturable.swift */,
-				5D1FB3051A4CF4FCC647EFC56C5839B3 /* CaptureNotificationObserver.swift */,
-				790BA2D4BF05D693DD998E68EBABB942 /* CGRect.swift */,
-				F6D5485E398EEC39162325B995A290BA /* CollectionViewChangeObserver.swift */,
-				91453857774FE0227D7C5CC7B2CB7721 /* Cropable.swift */,
-				7F23C1FB5EA4155D4B626E5EE82125D6 /* CropableScrollViewDelegate.swift */,
-				F0E9D3BACEB84BF3ADA25A42CD40C026 /* FloatingViewLayout.swift */,
-				E6C4D5C156CBC744AD897100B69CBEC3 /* LinesView.swift */,
-				D170C4A28E63EBE15EACEC6EE3EB3F1D /* NSIndexSet.swift */,
-				AEE104E4C6FEC84F691A3841F02B3089 /* PhotoCachable.swift */,
-				D96CB89EF23E90BE71C0963C81A5B128 /* PhotoCapturable.swift */,
-				8716D4064FF68F65EAA4B187D48E75CD /* PhotoFetchable.swift */,
-				B0ABA58CE525FD3FD35ABC410C3A76F8 /* UICollectionView.swift */,
-				B89D11E46740CD30521408716BCA4078 /* UIView.swift */,
-				EB37C7BF02988AB944583EDF58DF9643 /* Support Files */,
+				B1FA0A1E52FDEDFB6BC1442EFC70FD44 /* ImagePickerKit */,
 			);
-			path = ImagePickerKit;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7158542C65F4BA9B3A5CE54049656B61 /* Pods-Athlee-ImageEditorKit */ = {
@@ -155,10 +139,49 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				DD4BE788A9B951E0CF1631F552C534FB /* Pods */,
+				2C31BD4AB49A81ED114394015A2B21A2 /* Pods */,
 				FB4ED269F14E81CD0557FB79D4BDF2E8 /* Products */,
 				C4C2D5891A1EB7E99760ADB3261CD341 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9CDAB4918E7064CF14F879A7E1E7530A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC21B969A6D69F4B94093CB23F46EFED /* ImagePickerKit.modulemap */,
+				E0AA95EB144FBB325651868126DEC55C /* ImagePickerKit.xcconfig */,
+				F5FFAB35504487713842DD8E46245FDE /* ImagePickerKit-dummy.m */,
+				381C8C507AE575CB689F724E4D4B4572 /* ImagePickerKit-prefix.pch */,
+				495F53DA3404E32A9E9B0110F389FB20 /* ImagePickerKit-umbrella.h */,
+				8065F4298A8213ED6938D79776B38A49 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ImagePickerKit";
+			sourceTree = "<group>";
+		};
+		B1FA0A1E52FDEDFB6BC1442EFC70FD44 /* ImagePickerKit */ = {
+			isa = PBXGroup;
+			children = (
+				BA22931B71BA74005A20882988A9F258 /* Capturable.swift */,
+				73742F060FBD40FDAE1EB70428812CC4 /* CaptureNotificationObserver.swift */,
+				538F21CA7BFF3599EC249D5FA0C5C7F3 /* CGAffineTransform.swift */,
+				3DDB529679FAD90B64E372A697EBDA17 /* CGRect.swift */,
+				369B6E22F936050EBFAEC0A99E654ED3 /* CollectionViewChangeObserver.swift */,
+				3077D61BF556F7F6662903A05E54DFF9 /* Cropable.swift */,
+				72A0317EB058992E7E3011B35D79DADF /* CropableScrollViewDelegate.swift */,
+				5E871B7BEDFD28FF29D28CB5CED0B198 /* FloatingViewLayout.swift */,
+				1F6E49111CA7934FEBB0A0331426AF16 /* LinesView.swift */,
+				9F1F24EA7BE4806D90CEA5F54AA8CEA8 /* NSIndexSet.swift */,
+				8666FBB007AE25CE99F8983E01246044 /* PhotoCachable.swift */,
+				C4028B40DAFC046C8004B486461FFF6C /* PhotoCapturable.swift */,
+				FFF1B101E183BCC4312A953F45789034 /* PhotoFetchable.swift */,
+				0D3BF1297BD5CE1A7FDB17F9CDAE5626 /* Radians.swift */,
+				1089D1D9E9F70A7085EF9536CEE39F65 /* UICollectionView.swift */,
+				F4768DBD04B023C0148677E374C5A857 /* UIView.swift */,
+				9CDAB4918E7064CF14F879A7E1E7530A /* Support Files */,
+			);
+			name = ImagePickerKit;
+			path = ImagePickerKit;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -177,28 +200,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DD4BE788A9B951E0CF1631F552C534FB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1CB08E9BC8B5AA9D9C0498A074EE6B7C /* ImagePickerKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		EB37C7BF02988AB944583EDF58DF9643 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				17711FE48C59F76B57A7447BCB2C9951 /* ImagePickerKit.modulemap */,
-				AAA43A466CB97E1D3D9ECCD5246CCF85 /* ImagePickerKit.xcconfig */,
-				A2095FDC766FC488D0DA03BC9D54AED5 /* ImagePickerKit-dummy.m */,
-				4021BBC07A14B3EA08D62FFF85A22B3D /* ImagePickerKit-prefix.pch */,
-				3663AD05A3E5643FA228E23F820182C5 /* ImagePickerKit-umbrella.h */,
-				9F1C8F4B4CC1D3DA307A0E71AE0B844D /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ImagePickerKit";
-			sourceTree = "<group>";
-		};
 		FB4ED269F14E81CD0557FB79D4BDF2E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,11 +212,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2156E8E7393A05E6F952B247237BEEDC /* Headers */ = {
+		BC7E4510E6F905498FF66C1A962F00AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C659A14A9954749BA85E730DD934A03 /* ImagePickerKit-umbrella.h in Headers */,
+				53AECBC9A2D4C0AADE3FE081B70C992C /* ImagePickerKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +231,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4B98CFC8BCE3D65075578F2C3B7EE922 /* ImagePickerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A09AD22018496A4B08125ED03D11E28B /* Build configuration list for PBXNativeTarget "ImagePickerKit" */;
+			buildPhases = (
+				27CF376C9893FB871069B8B0E299FB3A /* Sources */,
+				7DEC7D57AC33246768B92BD9B0DDB680 /* Frameworks */,
+				BC7E4510E6F905498FF66C1A962F00AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImagePickerKit;
+			productName = ImagePickerKit;
+			productReference = 2D2379C21635F0E68BC838BEC5CB153A /* ImagePickerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		67E2E55BD30786D462FFD34C95468F0F /* Pods-Athlee-ImageEditorKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E846A81F58A700D90F5BC1522C68B3D /* Build configuration list for PBXNativeTarget "Pods-Athlee-ImageEditorKit" */;
@@ -246,23 +264,6 @@
 			name = "Pods-Athlee-ImageEditorKit";
 			productName = "Pods-Athlee-ImageEditorKit";
 			productReference = A618944C5E77FA70B009C46D073971D5 /* Pods_Athlee_ImageEditorKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B5BD900E5E5A8EE01337DF51009F9188 /* ImagePickerKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6B78B2D311939C2CD9115C8030547278 /* Build configuration list for PBXNativeTarget "ImagePickerKit" */;
-			buildPhases = (
-				9F2201CAC00EA4303BF3A0645ED349F7 /* Sources */,
-				140BD7DC13E3D78276B5C1E6FB0CDBF3 /* Frameworks */,
-				2156E8E7393A05E6F952B247237BEEDC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ImagePickerKit;
-			productName = ImagePickerKit;
-			productReference = 2D2379C21635F0E68BC838BEC5CB153A /* ImagePickerKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -286,42 +287,42 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5BD900E5E5A8EE01337DF51009F9188 /* ImagePickerKit */,
+				4B98CFC8BCE3D65075578F2C3B7EE922 /* ImagePickerKit */,
 				67E2E55BD30786D462FFD34C95468F0F /* Pods-Athlee-ImageEditorKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27CF376C9893FB871069B8B0E299FB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BBAF4D29EAAE1554A52BFD3430F8A5F /* Capturable.swift in Sources */,
+				8B3AED06EA35D8DBA7FAC60B8285DE85 /* CaptureNotificationObserver.swift in Sources */,
+				1B73443587A29D6C934CF1D339FA4790 /* CGAffineTransform.swift in Sources */,
+				3C0E2564A2042A0F92DD035FE0DF0E7B /* CGRect.swift in Sources */,
+				C6D9B7E124B175CB6BCF907C0305FDD6 /* CollectionViewChangeObserver.swift in Sources */,
+				CA67B3FA441888586F6307AADB89C78A /* Cropable.swift in Sources */,
+				97E25D7A8255741C36104E8E0BC0F651 /* CropableScrollViewDelegate.swift in Sources */,
+				1F31EEB723678B16700F0BC5CD001B35 /* FloatingViewLayout.swift in Sources */,
+				1E84194C02580EB54493924DD0690625 /* ImagePickerKit-dummy.m in Sources */,
+				F70378808A5187325E7C70F3AD2C26FB /* LinesView.swift in Sources */,
+				1629FA1CAA8B52E0DFF40F1F169A6704 /* NSIndexSet.swift in Sources */,
+				669D8511202C46D1EE0A7E125A3B6510 /* PhotoCachable.swift in Sources */,
+				13C94C585333738F061542E2DCB53DB2 /* PhotoCapturable.swift in Sources */,
+				103F9037380D06F925E0CD38E15E8BC7 /* PhotoFetchable.swift in Sources */,
+				D273B13456A976E1C4C24CBDBFDDA098 /* Radians.swift in Sources */,
+				7CA4EA95E94EDE842082CC2319C27B45 /* UICollectionView.swift in Sources */,
+				E36962126EF77E8809FE040C2840D485 /* UIView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DCBD7A103C1FBB57F06B8B861CEDA5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				195CD79583AC88DA47DAE7BF2C1545C4 /* Pods-Athlee-ImageEditorKit-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F2201CAC00EA4303BF3A0645ED349F7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E03F06DC6E9C1C736FF00DA377D322A /* Capturable.swift in Sources */,
-				0452DAD31DEB7356009EFE32 /* Radians.swift in Sources */,
-				0452DAD11DEB72B6009EFE32 /* CGAffineTransform.swift in Sources */,
-				989C6014287F5C7E27E2CC8A8F9A1B3D /* CaptureNotificationObserver.swift in Sources */,
-				F2FE3D0B39AA87A3AC16D4DC71596EC8 /* CGRect.swift in Sources */,
-				82ED2FAFF08E69091D799B55710493B5 /* CollectionViewChangeObserver.swift in Sources */,
-				B99ED3C1196780821EA5139B26161B9F /* Cropable.swift in Sources */,
-				04883853943FEA070E919BC5566089AB /* CropableScrollViewDelegate.swift in Sources */,
-				0A4C3AC902DEF0BA8AE6FCFE5F3F525B /* FloatingViewLayout.swift in Sources */,
-				D5305606F8C817216EF562E8D2DB0AFA /* ImagePickerKit-dummy.m in Sources */,
-				00C5A665E5B22AE74498311D7ED157A2 /* LinesView.swift in Sources */,
-				8F6A8A59B27B7FE193B64023A924582A /* NSIndexSet.swift in Sources */,
-				D0A54CED008DC87AEF7082508D0388BC /* PhotoCachable.swift in Sources */,
-				46FA26FDD71AF75371D934822A588BFF /* PhotoCapturable.swift in Sources */,
-				DFCB127C63F3150D69CE11DF91899DD7 /* PhotoFetchable.swift in Sources */,
-				D841BD355186A853E60148FEEBAE1AEF /* UICollectionView.swift in Sources */,
-				1D576296F35BC1395BC09BF74D2293CE /* UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,15 +332,15 @@
 		5518D638A51F03B89B04C57D1CC4EFC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ImagePickerKit;
-			target = B5BD900E5E5A8EE01337DF51009F9188 /* ImagePickerKit */;
+			target = 4B98CFC8BCE3D65075578F2C3B7EE922 /* ImagePickerKit */;
 			targetProxy = A6843329FEA495BA03E89E7F203579FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3973531135A6D908493AC456D55749FD /* Release */ = {
+		218AA81CEA8DE5B3B88F4BFF9C9A2A7A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAA43A466CB97E1D3D9ECCD5246CCF85 /* ImagePickerKit.xcconfig */;
+			baseConfigurationReference = E0AA95EB144FBB325651868126DEC55C /* ImagePickerKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -490,9 +491,9 @@
 			};
 			name = Debug;
 		};
-		CB3CD99157B8EB10BECF4780AF77A138 /* Debug */ = {
+		E30C281C030AEC1C597A76FAF38649DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAA43A466CB97E1D3D9ECCD5246CCF85 /* ImagePickerKit.xcconfig */;
+			baseConfigurationReference = E0AA95EB144FBB325651868126DEC55C /* ImagePickerKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -571,20 +572,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B78B2D311939C2CD9115C8030547278 /* Build configuration list for PBXNativeTarget "ImagePickerKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB3CD99157B8EB10BECF4780AF77A138 /* Debug */,
-				3973531135A6D908493AC456D55749FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7E846A81F58A700D90F5BC1522C68B3D /* Build configuration list for PBXNativeTarget "Pods-Athlee-ImageEditorKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C429CE185CFAADC421CE0A4BBD6574FD /* Debug */,
 				E54755FED589BFE11F4E28D6C938C3DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A09AD22018496A4B08125ED03D11E28B /* Build configuration list for PBXNativeTarget "ImagePickerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E30C281C030AEC1C597A76FAF38649DB /* Debug */,
+				218AA81CEA8DE5B3B88F4BFF9C9A2A7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

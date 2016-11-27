@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit 
 
 public extension CGAffineTransform {
   public static func scalingFactor(toFill containerSize: CGSize, with contentSize: CGSize, atAngle angle: Double) -> Double {

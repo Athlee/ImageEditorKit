@@ -306,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-6e-Cg0" customClass="TwoSideSlider" customModule="Athlee_ImageEditorKit" customModuleProvider="target">
-                                <rect key="frame" x="54" y="53" width="267" height="52.5"/>
+                                <rect key="frame" x="54" y="53" width="267" height="53"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -331,14 +331,14 @@
                                 </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="less bright" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-XZ-cjU">
-                                <rect key="frame" x="16" y="64.5" width="30" height="30"/>
+                                <rect key="frame" x="16" y="65" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="DVy-XM-Wo5"/>
                                     <constraint firstAttribute="height" constant="30" id="HVX-a4-mUJ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more bright" translatesAutoresizingMaskIntoConstraints="NO" id="eCE-bn-HG1">
-                                <rect key="frame" x="329" y="64.5" width="30" height="30"/>
+                                <rect key="frame" x="329" y="65" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="7yT-HO-n62"/>
                                     <constraint firstAttribute="height" constant="30" id="uvj-Pc-Uim"/>
@@ -389,7 +389,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-IR-4UD" customClass="ScalePicker" customModule="Athlee_ImageEditorKit" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="20" width="383" height="92.5"/>
+                                <rect key="frame" x="-4" y="20" width="383" height="93"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DBw-IR-4UD" secondAttribute="height" multiplier="1:1" id="RkX-3H-oSB"/>
@@ -418,7 +418,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzi-Ii-EiC">
-                                <rect key="frame" x="163.5" y="120.5" width="48" height="30"/>
+                                <rect key="frame" x="164" y="121" width="48" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -428,7 +428,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHU-A0-OWf">
-                                <rect key="frame" x="16" y="120.5" width="30" height="30"/>
+                                <rect key="frame" x="16" y="121" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9zz-pG-lms"/>
                                     <constraint firstAttribute="width" constant="30" id="AD9-2F-iNG"/>
