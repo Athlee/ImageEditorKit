@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IXg-i1-jQB">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IXg-i1-jQB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Select a filter-->
@@ -17,23 +21,23 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncq-Ue-sQD">
-                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
                                 <connections>
                                     <segue destination="Uwh-av-FiY" kind="embed" id="cmY-OE-eCZ"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-M7-Fsj">
-                                <rect key="frame" x="0.0" y="364" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="397.5" width="375" height="111"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BMH-rF-yoF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxd-Nz-qAZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="111"/>
                                                 <state key="normal" image="filters"/>
                                                 <state key="selected" image="filters_selected"/>
                                                 <state key="highlighted" image="filters_selected"/>
@@ -42,7 +46,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZi-c7-jCJ">
-                                                <rect key="frame" x="200" y="0.0" width="200" height="100"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="111"/>
                                                 <state key="normal" image="brightness"/>
                                                 <state key="selected" image="brightness_selected"/>
                                                 <state key="highlighted" image="brightness_selected"/>
@@ -51,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsc-AT-zdD">
-                                                <rect key="frame" x="400" y="0.0" width="200" height="100"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="111"/>
                                                 <state key="normal" image="crop"/>
                                                 <state key="selected" image="crop_selected"/>
                                                 <state key="highlighted" image="crop_selected"/>
@@ -62,7 +66,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="BMH-rF-yoF" firstAttribute="leading" secondItem="3e6-M7-Fsj" secondAttribute="leading" id="CnN-OQ-qbd"/>
                                     <constraint firstAttribute="bottom" secondItem="BMH-rF-yoF" secondAttribute="bottom" id="GEu-W7-5ze"/>
@@ -71,25 +75,25 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jF-ke-xTK" userLabel="Filters">
-                                <rect key="frame" x="0.0" y="464" width="600" height="136"/>
+                                <rect key="frame" x="0.0" y="508.5" width="375" height="158.5"/>
                                 <connections>
                                     <segue destination="FIu-es-cl0" kind="embed" id="6Og-N1-0pg"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="le1-je-G6N" userLabel="Brightness">
-                                <rect key="frame" x="0.0" y="464" width="600" height="136"/>
+                                <rect key="frame" x="0.0" y="508.5" width="375" height="158.5"/>
                                 <connections>
                                     <segue destination="JKp-OS-4am" kind="embed" id="fk9-zC-r1V"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmW-ob-pJa" userLabel="Crop">
-                                <rect key="frame" x="0.0" y="464" width="600" height="136"/>
+                                <rect key="frame" x="0.0" y="508.5" width="375" height="158.5"/>
                                 <connections>
                                     <segue destination="wtJ-au-BkW" kind="embed" id="2yX-L6-ViB"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0jF-ke-xTK" firstAttribute="top" secondItem="3e6-M7-Fsj" secondAttribute="top" id="0tq-Ct-PgG"/>
                             <constraint firstItem="ncq-Ue-sQD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Gt-Hd-xZL"/>
@@ -145,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="429"/>
+            <point key="canvasLocation" x="1286" y="509"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="wqY-qf-MSs">
@@ -156,15 +160,15 @@
                         <viewControllerLayoutGuide type="bottom" id="orP-6v-Y9M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IcJ-UE-y6A">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyu-a0-6ku">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hyu-a0-6ku" firstAttribute="width" secondItem="IcJ-UE-y6A" secondAttribute="width" id="Sg2-oC-rn6"/>
                             <constraint firstItem="Hyu-a0-6ku" firstAttribute="centerX" secondItem="IcJ-UE-y6A" secondAttribute="centerX" id="WTu-O0-zm3"/>
@@ -178,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhL-2b-rVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="429"/>
+            <point key="canvasLocation" x="2314" y="508"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="OlF-vS-Fy2">
@@ -189,12 +193,12 @@
                         <viewControllerLayoutGuide type="bottom" id="9t0-d6-OJm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zeW-nT-vMT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cVu-Uk-R8l">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="136"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bCz-ZZ-aQD">
                                     <size key="itemSize" width="122" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -203,7 +207,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="iir-0y-R6g" customClass="FilterCell" customModule="Athlee_ImageEditorKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="18" width="122" height="100"/>
+                                        <rect key="frame" x="0.0" y="29" width="122" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="122" height="100"/>
@@ -224,7 +228,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-3j-Tu3">
-                                                    <rect key="frame" x="23.5" y="0.0" width="75" height="75"/>
+                                                    <rect key="frame" x="24" y="0.0" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mTr-3j-Tu3" secondAttribute="height" multiplier="1:1" id="Afx-82-te1"/>
                                                         <constraint firstAttribute="width" secondItem="mTr-3j-Tu3" secondAttribute="height" multiplier="1:1" id="qeD-CY-h7Y"/>
@@ -239,7 +243,6 @@
                                                     </variation>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="mTr-3j-Tu3" firstAttribute="centerX" secondItem="iir-0y-R6g" secondAttribute="centerX" id="80Q-HU-LEf"/>
@@ -274,7 +277,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cVu-Uk-R8l" firstAttribute="top" secondItem="cgp-yp-y7w" secondAttribute="bottom" id="B7k-5D-VSP"/>
                             <constraint firstAttribute="trailing" secondItem="cVu-Uk-R8l" secondAttribute="trailing" id="IRM-bZ-ay5"/>
@@ -288,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSY-b1-AR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-337" y="1126"/>
+            <point key="canvasLocation" x="-166" y="1206"/>
         </scene>
         <!--Brightness View Controller-->
         <scene sceneID="cQC-43-kTT">
@@ -299,21 +302,21 @@
                         <viewControllerLayoutGuide type="bottom" id="9Gd-lc-j4b"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3QQ-mr-vOW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-6e-Cg0" customClass="TwoSideSlider" customModule="Athlee_ImageEditorKit" customModuleProvider="target">
-                                <rect key="frame" x="58" y="45" width="484" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="54" y="53" width="267" height="52.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
-                                        <color key="value" red="0.52941176470588236" green="0.42745098039215684" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.52941176470588236" green="0.42745098039215684" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="centerThickColor">
-                                        <color key="value" red="0.52941176470588236" green="0.42745098039215684" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.52941176470588236" green="0.42745098039215684" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Thumb"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
@@ -328,21 +331,21 @@
                                 </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="less bright" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-XZ-cjU">
-                                <rect key="frame" x="20" y="53" width="30" height="30"/>
+                                <rect key="frame" x="16" y="64.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="DVy-XM-Wo5"/>
                                     <constraint firstAttribute="height" constant="30" id="HVX-a4-mUJ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more bright" translatesAutoresizingMaskIntoConstraints="NO" id="eCE-bn-HG1">
-                                <rect key="frame" x="550" y="53" width="30" height="30"/>
+                                <rect key="frame" x="329" y="64.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="7yT-HO-n62"/>
                                     <constraint firstAttribute="height" constant="30" id="uvj-Pc-Uim"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="e7e-6e-Cg0" firstAttribute="leading" secondItem="aMg-XZ-cjU" secondAttribute="trailing" id="5vh-bT-7aN"/>
                             <constraint firstItem="aMg-XZ-cjU" firstAttribute="leading" secondItem="3QQ-mr-vOW" secondAttribute="leadingMargin" id="HjX-FK-Miv"/>
@@ -371,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2v-sy-4bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="1133"/>
+            <point key="canvasLocation" x="474" y="1213"/>
         </scene>
         <!--Crop View Controller-->
         <scene sceneID="jGD-LO-hJv">
@@ -382,18 +385,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Krk-F3-5zL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A4r-mf-mgv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-IR-4UD" customClass="ScalePicker" customModule="Athlee_ImageEditorKit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="600" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="-4" y="20" width="383" height="92.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DBw-IR-4UD" secondAttribute="height" multiplier="1:1" id="RkX-3H-oSB"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="tickColor">
-                                        <color key="value" red="0.52941176469999995" green="0.42745098040000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.52941176469999995" green="0.42745098040000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="count">
                                         <integer key="value" value="57"/>
@@ -415,17 +418,17 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzi-Ii-EiC">
-                                <rect key="frame" x="276" y="98" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="120.5" width="48" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="RESET">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didPressResetButton:" destination="wtJ-au-BkW" eventType="touchUpInside" id="xlU-b6-4d1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHU-A0-OWf">
-                                <rect key="frame" x="20" y="98" width="30" height="30"/>
+                                <rect key="frame" x="16" y="120.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9zz-pG-lms"/>
                                     <constraint firstAttribute="width" constant="30" id="AD9-2F-iNG"/>
@@ -436,7 +439,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KHU-A0-OWf" firstAttribute="leading" secondItem="A4r-mf-mgv" secondAttribute="leadingMargin" id="2WC-2S-Sca"/>
                             <constraint firstItem="DBw-IR-4UD" firstAttribute="leading" secondItem="A4r-mf-mgv" secondAttribute="leadingMargin" constant="-20" id="3rf-mi-21z"/>
@@ -463,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gc8-6g-ByP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="1133"/>
+            <point key="canvasLocation" x="1122" y="1213"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sCG-sg-ufb">
@@ -481,7 +484,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9i7-Cx-u68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429"/>
+            <point key="canvasLocation" x="474" y="509"/>
         </scene>
     </scenes>
     <resources>

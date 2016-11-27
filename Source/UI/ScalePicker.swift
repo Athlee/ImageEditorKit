@@ -226,4 +226,8 @@ extension ScalePicker {
     
     scrollView.setContentOffset(offset, animated: false)
   }
+  
+  public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    sendActions(for: .editingDidEnd)
+  }
 }

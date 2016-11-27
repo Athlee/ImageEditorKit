@@ -706,7 +706,7 @@
 				DEVELOPMENT_TEAM = RG4N372RZE;
 				INFOPLIST_FILE = "Athlee-ImageEditorKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -721,7 +721,7 @@
 				DEVELOPMENT_TEAM = RG4N372RZE;
 				INFOPLIST_FILE = "Athlee-ImageEditorKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.athlee.Athlee-ImageEditorKit-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

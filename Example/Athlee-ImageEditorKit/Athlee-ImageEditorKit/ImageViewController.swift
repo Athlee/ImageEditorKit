@@ -20,6 +20,7 @@ final class ImageViewController: UIViewController, Cropable {
   
   var cropView = UIScrollView()
   var childView = UIImageView()
+  var childContainerView = UIView()
   var linesView = LinesView()
   
   var alwaysShowGuidelines: Bool = true

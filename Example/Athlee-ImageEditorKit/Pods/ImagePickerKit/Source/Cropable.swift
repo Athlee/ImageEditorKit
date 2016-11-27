@@ -18,6 +18,10 @@ public protocol Cropable {
   /// A cropable area containing the content.
   var cropView: UIScrollView { get set }
   
+  /// A view containing the child. It is required to simplify 
+  /// any transformations on the child.
+  var childContainerView: UIView { get set }
+  
   /// A cropable content view.
   var childView: ChildView { get set }
   
@@ -125,7 +129,8 @@ public extension Cropable where ChildView == UIImageView {
     cropView.showsVerticalScrollIndicator = false
     cropView.contentSize = view.bounds.size
     
-    cropView.addSubview(childView)
+    childContainerView.addSubview(childView)
+    cropView.addSubview(childContainerView)
   }
   
   ///
@@ -151,6 +156,8 @@ public extension Cropable where ChildView == UIImageView {
     
     if adjustingContent {
       childView.sizeToFit()
+      childContainerView.frame.size = childView.frame.size
+      childContainerView.frame.origin = .zero
       childView.frame.origin = .zero
       cropView.contentOffset = .zero
       cropView.contentSize = childView.image!.size
@@ -190,14 +197,15 @@ public extension Cropable {
     let widthScale = scrollViewSize.width / childViewSize.width
     let heightScale = scrollViewSize.height / childViewSize.height
     
-    let minScale = max(scrollViewSize.width, scrollViewSize.height) / max(childViewSize.width, childViewSize.height)
     let maxScale = max(heightScale, widthScale)
     
     if let _self = self as? UIScrollViewDelegate {
       cropView.delegate = _self
     }
     
-    cropView.minimumZoomScale = minScale
+    cropView.minimumZoomScale = CGFloat(CGAffineTransform.scalingFactor(toFill: cropView.bounds.size,
+                                                                with: childContainerView.bounds.size,
+                                                                atAngle: 0))
     cropView.maximumZoomScale = 4
     cropView.zoomScale = maxScale
     
@@ -302,12 +310,12 @@ public extension Cropable {
     }
     
     linesView.frame.size = CGSize(
-      width: min(cropView.frame.width, childView.frame.width),
-      height: min(cropView.frame.height, childView.frame.height)
+      width: min(cropView.frame.width, childContainerView.frame.width),
+      height: min(cropView.frame.height, childContainerView.frame.height)
     )
     
     let visibleRect = CGRect(origin: cropView.contentOffset, size: cropView.bounds.size)
-    let intersection = visibleRect.intersection(childView.frame)
+    let intersection = visibleRect.intersection(childContainerView.frame)
     linesView.frame = intersection
   }
 }

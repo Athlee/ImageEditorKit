@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00C5A665E5B22AE74498311D7ED157A2 /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4D5C156CBC744AD897100B69CBEC3 /* LinesView.swift */; };
+		0452DAD11DEB72B6009EFE32 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452DAD01DEB72B6009EFE32 /* CGAffineTransform.swift */; };
+		0452DAD31DEB7356009EFE32 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452DAD21DEB7356009EFE32 /* Radians.swift */; };
 		04883853943FEA070E919BC5566089AB /* CropableScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23C1FB5EA4155D4B626E5EE82125D6 /* CropableScrollViewDelegate.swift */; };
 		0A4C3AC902DEF0BA8AE6FCFE5F3F525B /* FloatingViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E9D3BACEB84BF3ADA25A42CD40C026 /* FloatingViewLayout.swift */; };
 		1013DC8B91E9905B54A7EB90126FE7CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -40,9 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0452DAD01DEB72B6009EFE32 /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
+		0452DAD21DEB7356009EFE32 /* Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
 		10DE656B4F5FA00FB06B5F2AB126C9F2 /* Pods-Athlee-ImageEditorKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Athlee-ImageEditorKit-dummy.m"; sourceTree = "<group>"; };
-		17711FE48C59F76B57A7447BCB2C9951 /* ImagePickerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ImagePickerKit.modulemap; sourceTree = "<group>"; };
-		2D2379C21635F0E68BC838BEC5CB153A /* ImagePickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ImagePickerKit.framework; path = ImagePickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17711FE48C59F76B57A7447BCB2C9951 /* ImagePickerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ImagePickerKit.modulemap; sourceTree = "<group>"; };
+		2D2379C21635F0E68BC838BEC5CB153A /* ImagePickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagePickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		320950A60FF8E882E7F69E1422DE30AF /* Pods-Athlee-ImageEditorKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Athlee-ImageEditorKit-resources.sh"; sourceTree = "<group>"; };
 		3663AD05A3E5643FA228E23F820182C5 /* ImagePickerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePickerKit-umbrella.h"; sourceTree = "<group>"; };
 		4021BBC07A14B3EA08D62FFF85A22B3D /* ImagePickerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePickerKit-prefix.pch"; sourceTree = "<group>"; };
@@ -54,17 +58,17 @@
 		8207B65EF79AB0A0392C0AEBA2192B27 /* Pods-Athlee-ImageEditorKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Athlee-ImageEditorKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		8716D4064FF68F65EAA4B187D48E75CD /* PhotoFetchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoFetchable.swift; path = Source/PhotoFetchable.swift; sourceTree = "<group>"; };
 		91453857774FE0227D7C5CC7B2CB7721 /* Cropable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cropable.swift; path = Source/Cropable.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F1C8F4B4CC1D3DA307A0E71AE0B844D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2095FDC766FC488D0DA03BC9D54AED5 /* ImagePickerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImagePickerKit-dummy.m"; sourceTree = "<group>"; };
 		A5E8D627266ECF76F783C3F9315D2C65 /* Pods-Athlee-ImageEditorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Athlee-ImageEditorKit.release.xcconfig"; sourceTree = "<group>"; };
-		A618944C5E77FA70B009C46D073971D5 /* Pods_Athlee_ImageEditorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Athlee_ImageEditorKit.framework; path = "Pods-Athlee-ImageEditorKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A618944C5E77FA70B009C46D073971D5 /* Pods_Athlee_ImageEditorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athlee_ImageEditorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A689FE9874950A8A4A642BC8507257BA /* Pods-Athlee-ImageEditorKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Athlee-ImageEditorKit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AAA43A466CB97E1D3D9ECCD5246CCF85 /* ImagePickerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImagePickerKit.xcconfig; sourceTree = "<group>"; };
 		AEE104E4C6FEC84F691A3841F02B3089 /* PhotoCachable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoCachable.swift; path = Source/PhotoCachable.swift; sourceTree = "<group>"; };
 		B0ABA58CE525FD3FD35ABC410C3A76F8 /* UICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionView.swift; path = Source/UICollectionView.swift; sourceTree = "<group>"; };
 		B89D11E46740CD30521408716BCA4078 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = "<group>"; };
-		BB6D4C623FE2CBEF4D44694A3087B350 /* Pods-Athlee-ImageEditorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Athlee-ImageEditorKit.modulemap"; sourceTree = "<group>"; };
+		BB6D4C623FE2CBEF4D44694A3087B350 /* Pods-Athlee-ImageEditorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Athlee-ImageEditorKit.modulemap"; sourceTree = "<group>"; };
 		C2DC30FB49ED8E130CF5D4ADCF6368BC /* Capturable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Capturable.swift; path = Source/Capturable.swift; sourceTree = "<group>"; };
 		C66E17DE2FF7A9F02F89A3ABD1B6A169 /* Pods-Athlee-ImageEditorKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Athlee-ImageEditorKit-umbrella.h"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -99,6 +103,8 @@
 		1CB08E9BC8B5AA9D9C0498A074EE6B7C /* ImagePickerKit */ = {
 			isa = PBXGroup;
 			children = (
+				0452DAD21DEB7356009EFE32 /* Radians.swift */,
+				0452DAD01DEB72B6009EFE32 /* CGAffineTransform.swift */,
 				C2DC30FB49ED8E130CF5D4ADCF6368BC /* Capturable.swift */,
 				5D1FB3051A4CF4FCC647EFC56C5839B3 /* CaptureNotificationObserver.swift */,
 				790BA2D4BF05D693DD998E68EBABB942 /* CGRect.swift */,
@@ -115,7 +121,6 @@
 				B89D11E46740CD30521408716BCA4078 /* UIView.swift */,
 				EB37C7BF02988AB944583EDF58DF9643 /* Support Files */,
 			);
-			name = ImagePickerKit;
 			path = ImagePickerKit;
 			sourceTree = "<group>";
 		};
@@ -301,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E03F06DC6E9C1C736FF00DA377D322A /* Capturable.swift in Sources */,
+				0452DAD31DEB7356009EFE32 /* Radians.swift in Sources */,
+				0452DAD11DEB72B6009EFE32 /* CGAffineTransform.swift in Sources */,
 				989C6014287F5C7E27E2CC8A8F9A1B3D /* CaptureNotificationObserver.swift in Sources */,
 				F2FE3D0B39AA87A3AC16D4DC71596EC8 /* CGRect.swift in Sources */,
 				82ED2FAFF08E69091D799B55710493B5 /* CollectionViewChangeObserver.swift in Sources */,

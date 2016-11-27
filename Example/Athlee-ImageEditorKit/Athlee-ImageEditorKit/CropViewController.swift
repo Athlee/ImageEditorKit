@@ -7,21 +7,19 @@
 //
 
 import UIKit
+import ImagePickerKit
 
 final class CropViewController: UIViewController {
   
-  // MARK: Outlets 
+  // MARK: Outlets
   
   @IBOutlet weak var scalePicker: ScalePicker!
   
   // MARK: Properties 
   
-  var theta: Float = 0
-  var beta: Float = 0
-  
-  var transformView: UIView {
-    return ContainerViewController.Children.image.cropContainerView
-  }
+  var theta: Double = 0
+  var beta: Double = 0
+  var angle: CGFloat = 0
   
   // MARK: Life cycle 
   
@@ -30,32 +28,49 @@ final class CropViewController: UIViewController {
     scalePicker.reset()
   }
   
-  // MARK: IBActions 
+  // MARK: IBActions
   
   @IBAction func didPressResetButton(_ sender: AnyObject) {
-    scalePicker.reset()
-    transformView.transform = CGAffineTransform.identity
     theta = 0
     beta = 0
+    angle = 0
+    
+    scalePicker.reset()
+    applyAngleTransform()
+    
+    let imageViewController = ContainerViewController.Children.image
+    imageViewController?.updateContent()
   }
   
   @IBAction func didChangeValue(_ sender: ScalePicker) {
     let value = sender.value
-    beta = value
-    let angle = theta + value
-    let transform = CGAffineTransform(rotationAngle: angle.toRadians())
-    transformView.transform = transform
+    beta = Double(value.toRadians())
+    angle = CGFloat(theta + beta)
+    
+    applyAngleTransform()
   }
   
   @IBAction func didPressRotateButton(_ sender: AnyObject) {
-    theta += -90
-    let transform = CGAffineTransform(rotationAngle: (theta + beta).toRadians())
-    transformView.transform = transform
+    theta += (-90.0).toRadians()
+    
+    applyAngleTransform()
+  }
+  
+  // MARK: Utils 
+  
+  fileprivate func applyAngleTransform() {
+    let scrollView = ContainerViewController.Children.image.cropView
+    let imageView = ContainerViewController.Children.image.childView
+    let transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+      .scaling(toFill: scrollView.bounds.size, with: imageView.bounds.size, atAngle: Double(angle))
+    
+    let minZoomFactor = CGAffineTransform.scalingFactor(toFill: scrollView.bounds.size,
+                                                        with: imageView.bounds.size,
+                                                        atAngle: Double(angle))
+    
+    scrollView.minimumZoomScale = CGFloat(minZoomFactor)
+    imageView.transform = angle != 0 ? transform : .identity
   }
 }
 
-extension Float {
-  func toRadians() -> CGFloat {
-    return CGFloat(self) * (CGFloat(M_PI) / 180)
-  }
-}
+
