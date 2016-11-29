@@ -35,7 +35,7 @@ public struct ImageProcessor: ImageProcessorType {
   
   // MARK: ImageProcessorType properties
   
-  public func process<T : Filter>(image: UIImage, filter: T, completion: (UIImage?) -> Void) {
+  public func process<T : Filter>(image: UIImage, filter: T, completion: @escaping (UIImage?) -> Void) {
     print("[ImageProcessor]: Unable to find appropriate processing method's overload...")
   }
   
@@ -237,10 +237,6 @@ public struct ImageProcessor: ImageProcessorType {
   fileprivate func setValues<T : Filter>(for filter: CIFilter, with _filter: T) {
     let scanned = _filter.scanned()
     for (key, value) in scanned {
-      guard let value = value as? AnyObject else {
-        continue
-      }
-      
       filter.setValue(value, forKey: key)
     }
   }

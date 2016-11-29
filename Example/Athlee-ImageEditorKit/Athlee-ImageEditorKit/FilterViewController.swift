@@ -102,7 +102,7 @@ extension FilterViewController: UICollectionViewDataSource, UICollectionViewDele
     }
   }
   
-  func prepareImage(at indexPath: IndexPath, completion: (UIImage?) -> Void) {
+  func prepareImage(at indexPath: IndexPath, completion: @escaping (UIImage?) -> Void) {
     switch indexPath.item {
     case 0:
       names[indexPath] = "None"
