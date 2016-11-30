@@ -21,7 +21,7 @@ public extension CGAffineTransform {
     let w = Double(contentSize.width)
     let W = Double(containerSize.width)
     
-    let scale1 = (H * cos(theta) + W * sin(theta)) / min(H, h)
+    let scale1 = (H * cos(theta) + W * sin(theta)) / min(H,h)
     let scale2 = (H * sin(theta) + W * cos(theta)) / min(W, w)
     
     let scalingFactor = max(scale1, scale2)

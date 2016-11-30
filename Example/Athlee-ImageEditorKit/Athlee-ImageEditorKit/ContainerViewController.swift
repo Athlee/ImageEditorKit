@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ContainerViewController: UIViewController {
+final class ContainerViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
   
   enum State {
     case filters
@@ -35,6 +35,15 @@ final class ContainerViewController: UIViewController {
     static var crop: CropViewController!
   }
   
+  let picker = UIImagePickerController()
+  
+  var image: UIImage? {
+    didSet {
+      Children.image.image = image
+      Children.filters.image = image
+    }
+  }
+  
   var state: State = .filters { didSet { updateVisibility() } }
   
   // MARK: Life cycle 
@@ -42,8 +51,15 @@ final class ContainerViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    //picker.allowsEditing = false
+    picker.sourceType = .photoLibrary
+    picker.delegate = self
+    picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+    
     addChildren()
     updateVisibility()
+    
+    image = UIImage(named: "photo")
   }
   
   override var prefersStatusBarHidden : Bool {
@@ -62,6 +78,10 @@ final class ContainerViewController: UIViewController {
   
   @IBAction func didPressCropButton(_ sender: AnyObject) {
     state = .crop
+  }
+  
+  @IBAction func didPressLibraryButton(_ sender: Any) {
+    present(picker, animated: true, completion: nil)
   }
   
   // MARK: Utils 
@@ -114,6 +134,14 @@ final class ContainerViewController: UIViewController {
       cropButton.isSelected = true
       Children.image.croppingBegan(true)
     }
+  }
+  
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+      self.image = image
+    }
+    
+    dismiss(animated: true, completion: nil)
   }
   
 }

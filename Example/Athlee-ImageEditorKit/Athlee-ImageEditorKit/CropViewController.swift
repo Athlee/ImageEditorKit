@@ -64,11 +64,13 @@ final class CropViewController: UIViewController {
     let transform = CGAffineTransform(rotationAngle: CGFloat(angle))
       .scaling(toFill: scrollView.bounds.size, with: imageView.bounds.size, atAngle: Double(angle))
     
-    let minZoomFactor = CGAffineTransform.scalingFactor(toFill: scrollView.bounds.size,
+    let maxZoomFactor = CGAffineTransform.scalingFactor(toFill: scrollView.bounds.size,
                                                         with: imageView.bounds.size,
                                                         atAngle: Double(angle))
     
-    scrollView.minimumZoomScale = CGFloat(minZoomFactor)
+    print("Zoom=\(scrollView.zoomScale), Max=\(maxZoomFactor)")
+    
+    scrollView.maximumZoomScale = CGFloat(maxZoomFactor)
     imageView.transform = angle != 0 ? transform : .identity
   }
 }

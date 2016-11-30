@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = "ImageEditorKit"
-  s.version               = "0.1.5"
+  s.version               = "0.2.0"
   s.summary               = "A simple and interactive framework for editing photos!"
   s.homepage              = "https://github.com/Athlee/ImageEditorKit"
   s.license               = { :type => "MIT", :file => "LICENSE" }

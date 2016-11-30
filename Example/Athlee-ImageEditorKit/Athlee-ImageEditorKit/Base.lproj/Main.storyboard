@@ -136,6 +136,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Select a filter" id="xUb-7U-O8M">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="rm2-HE-Ebs">
+                            <connections>
+                                <action selector="didPressLibraryButton:" destination="BYZ-38-t0r" id="eNX-tO-yNT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="eJh-wZ-sSv"/>
                     </navigationItem>
                     <connections>
@@ -207,7 +212,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="iir-0y-R6g" customClass="FilterCell" customModule="Athlee_ImageEditorKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29" width="122" height="100"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="122" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="122" height="100"/>
@@ -498,6 +503,6 @@
         <image name="filters_selected" width="75" height="75"/>
         <image name="less bright" width="30" height="30"/>
         <image name="more bright" width="40" height="43"/>
-        <image name="photo" width="500" height="500"/>
+        <image name="photo" width="1632" height="1224"/>
     </resources>
 </document>

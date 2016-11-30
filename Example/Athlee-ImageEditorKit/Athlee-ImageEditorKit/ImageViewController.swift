@@ -18,6 +18,8 @@ final class ImageViewController: UIViewController, Cropable {
   
   // MARK: Cropable properties
   
+  var cropMaskView = UIView()
+  
   var cropView = UIScrollView()
   var childView = UIImageView()
   var childContainerView = UIView()
@@ -60,8 +62,6 @@ final class ImageViewController: UIViewController, Cropable {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    //image = imageView.image!
     
     addCropable(to: cropContainerView)
     cropView.delegate = delegate
